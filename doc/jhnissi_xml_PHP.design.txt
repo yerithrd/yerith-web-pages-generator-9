@@ -1,0 +1,8 @@
+class
+ widget
+   palette (WindowText, etc.); property of widget
+   windowTitle; property of widget
+   locale; property of widget
+   
+   widget; class YerithPushButton; 
+     property; geometry

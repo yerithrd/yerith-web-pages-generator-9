@@ -1,0 +1,29 @@
+< !--Login form-- >
+
+  <form method="post" id="login_form" action="index.php" name="login_form"> 
+		<fieldset> 
+			<legend>
+				<input type="hidden" name="set_session" value="t2pituh8ki2kr83r6afpipipqr"> Log in <a href="doc/html/index.html" target="documentation">
+					<img src="themes/dot.gif" title ="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+			</legend>
+
+			<div class="item"><label for="input_username">Username:</label>
+				<input type = "text" name = "pma_username" id="input_username" value="" size="24" class="textfield">
+			</div> 
+	
+			<div class="item" > 
+				<label for="input_password">Password:</label > 
+					<input type="password" name="pma_password" id="input_password" value="" size="24" class="textfield">
+			</div> 
+
+			<input type="hidden" name="server" value="1">
+		</fieldset>
+
+		<fieldset class="tblFooters">
+			<input type="button" value="yri_html_page_Widget_button" id="yri_html_page_Widget_button">
+			<input class="btn btn-primary" value="Go" type="submit" id="input_go">
+			<input type="hidden" name="target" value="index.php">
+			<input type="hidden" name="token" value="4c7944772c4e587322355556254c7e27">
+		</fieldset> 
+	</form>
+

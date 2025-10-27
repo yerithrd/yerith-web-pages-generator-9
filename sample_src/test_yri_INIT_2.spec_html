@@ -1,0 +1,64 @@
+
+yerith-web-pages-generator-MAIN YECEFOIQ-WEB-PAGES
+{
+
+	web-html-page yri_test
+	{
+		# 'C'omments. #
+		yri_html_page_title: 'Bienvenue !';
+		yri_html_page_MENU_BAR_link_string: 'yri_test !';
+		yri_html_page_input_header_menu_bar[web-html-page-menu-bar-headers];
+
+	};
+
+
+	# 'K'ommentar #
+	web-html-page index
+	{
+		# 'C'omments. #
+		# 'C'omments. #
+		# 'C'omments. #
+		yri_html_page_title: 'Bienvenue au centre de formation qualifiante Yecefoiq !';
+
+		yri_html_page_MENU_BAR_link_string: 'yri_index !';
+		
+		yri_html_page_input_header_menu_bar[web-html-page-menu-bar-headers];
+
+		yri_html_page_text_SECTION (HTML_HEADER_H/3; 'Description du Centre de Formation')
+		{
+			VARIABLE_YRI_PARAGRAPH variable_paragraph_1 
+				{text-yri-font-size = 11} : 
+				{text-yri-width-box = 5 cm} ===
+					"Ce centre de formation en Informatique est la proprit de 
+				 	la start--up entrepreneuriale de Gnie des Systmes de 
+				 	Gestion Informatiss YERITH RD.
+					Les cours du centre de formation ont pour cibles les
+					personnes suivantes:"
+
+					li_begin: 'Travailleurs qualifis en Informatique.'
+				  li: 'Travailleurs qualifis en Sciences et en Gnie.'
+				  li: 'lves et coliers des tablissements confessionnelles vangliques.'
+			  	li: 'tudiants dans les universits publiques confessionnelles vangliques.'
+					li_end: 'tudiants dans les universits du monde moderne 
+						(incluant des catholiques orthodoxes).'
+		};
+	};
+
+	# Comment: Here are declared all web html pages 				#
+	# linked to this menubar widget.												#
+	web-html-page-menu-bar-headers
+	{
+		# jh_nissi #
+		# vertical-left  vertical-right  horizontal-top 		#
+		web-html-page-menu-bar-headers_Position = 'vertical-left';
+
+		yri_html_page_section[index,
+													yri_test,
+												  a_propos, 
+												  programme_des_cours, 
+													contenu_des_cours,
+													impressum];	
+	};
+
+
+}

@@ -1,0 +1,17 @@
+*.swp
+*.o
+a.out
+*.tab.*
+*.bak
+.cproject
+.project
+.settings
+*.dot
+*.output
+*.log
+tok.h
+bison.c
+lex.c
+lex.yy.c
+lib
+obj

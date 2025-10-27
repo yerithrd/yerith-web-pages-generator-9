@@ -1,0 +1,40 @@
+yerith-web-pages-generator-MAIN YECEFOIQ-WEB-PAGES
+{
+
+	web-html-page index
+  {
+    yri_html_page_title: 'Bienvenue au centre de formation qualifiante Yecefoiq !';
+    yri_html_page_input_header_menu_bar[web-html-page-menu-bar-headers];
+		yri_html_page_MENU_BAR_link_string: 'yri_index !';
+
+    yri_html_page_text_SECTION (HTML_HEADER_H/3; 'Description du Centre de Formation')
+    {
+      VARIABLE_YRI_PARAGRAPH variable_paragraph_1
+        {text-yri-font-size = 5} : 
+        {text-yri-width-box = 5cm} === 
+        "PLEase read following list items ordered !:"
+        
+        li_begin: '1st list item'
+        li: '2nd list item.'
+        li_end: 'Last list item.'
+    };
+  };
+
+	web-html-page a-propos
+  {
+    yri_html_page_title: 'PRESENTATION DU centre de formation qualifiante Yecefoiq !';
+    yri_html_page_input_header_menu_bar[web-html-page-menu-bar-headers];		
+		yri_html_page_MENU_BAR_link_string: 'A PROPOS !';
+  };
+  
+  web-html-page-menu-bar-headers
+  {
+    web-html-page-menu-bar-headers_Position = 'vertical-left';
+    
+    yri_html_page_section[index,
+													a-propos,
+                          programme_des_cours,
+                          contenu_des_cours,
+                          impressum];
+  };
+}

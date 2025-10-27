@@ -1,0 +1,64 @@
+
+yerith-web-pages-generator-MAIN YERITHERPPGIPlatinum
+{
+
+	web-html-page main_window {
+		# 'yerith-erp-main-window.ui' #
+		yri_html_page_title: 'Bienvenue !';
+		yri_html_page_MENU_BAR_link_string: 'yerith-erp-main-window.ui';
+		yri_html_page_input_header_menu_bar[web-html-page-menu-bar-headers];
+
+
+		yri_html_page_Widget_label_text ('YERITH-ERP-9.0-platiNum') 						{ '0'; '470'; '800'; '21' };	
+		
+	
+		yri_html_page_Widget_button ('RH \n Fournisseurs') 											{ '193'; '122'; '103'; '89' };
+		yri_html_page_Widget_button ('CRM \n Clients') 		 											{ '193'; '215'; '103'; '89' };
+		yri_html_page_Widget_button ('Paiements') 				 											{ '193'; '308'; '103'; '89' };
+		yri_html_page_Widget_button ('CHARGES \n FINANCIERES \n\n (Emprunts)') 	{ '300'; '122'; '103'; '89' };
+		yri_html_page_Widget_button ('Immobilisations / Stocks')								{ '300'; '215'; '103'; '89' };
+		yri_html_page_Widget_button ('Tableaux \n de \n Bords')									{ '300'; '308'; '103'; '89' };
+
+		yri_html_page_Widget_button ('Entrer une \n Immobilisation, \n
+																	un stock, \n
+																	un service, \n
+																	une CHARGE') 															{ '407'; '122'; '103'; '89' };
+
+		yri_html_page_Widget_button ('Marchandises / \n SERVICES') 							{ '407'; '215'; '103'; '89' };
+
+		yri_html_page_Widget_button ('TRANSFERTS / \n
+																	SORTIES \n 
+																	de \n 
+																	Immobilisations\n 
+																	/ Stocks')	 															{ '407'; '308'; '103'; '89' };
+
+		yri_html_page_Widget_button ('Ventes') 																	{ '514'; '122'; '103'; '89' };
+
+		yri_html_page_Widget_button ('Sortir ou\n
+																	Transferer DES \n 
+																	Immobilisations \n 
+																	/ STOCKS') 																{ '514'; '215'; '103'; '89' };
+
+		yri_html_page_Widget_button ('Point\n
+																	de\n
+																	Vente') 																	{ '514'; '308`'; '103'; '89' };
+		
+	};
+
+
+	# Comment: Here are declared all web html pages 				#
+	# linked to this menubar widget.												#
+	web-html-page-menu-bar-headers
+	{
+		# jh_nissi #
+		# vertical-left  vertical-right  horizontal-top 		#
+		web-html-page-menu-bar-headers_Position = 'vertical-left';
+
+		yri_html_page_section[index,
+													yri_test,
+												  a_propos, 
+												  programme_des_cours, 
+													contenu_des_cours,
+													impressum];	
+	};
+}

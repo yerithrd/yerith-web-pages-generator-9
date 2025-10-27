@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<FileVersion major="1" minor="0" />
+	<ActiveTarget name="Debug" />
+	<File name="src/YERITH_WEB_PAGES_GENERATOR_MAIN.cpp" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6635" topLine="116" />
+		</Cursor>
+	</File>
+	<File name="src/yri-tree-html/yri-tree-html-PAGE-text-section.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="184" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src/yri-tree-html/yri-tree-html-PAGE-text-section.hpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="564" topLine="21" />
+		</Cursor>
+	</File>
+	<File name="src/yri-tree-html/yri-tree-html-PAGE.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4678" topLine="122" />
+		</Cursor>
+	</File>
+	<File name="src/yri-tree-html/yri-tree-html-PAGE-menu-bar-headers.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="396" topLine="22" />
+		</Cursor>
+	</File>
+	<File name="src/yri-tree-html/yri-tree-html-node.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="309" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src/utils/YRI_CPP_UTILS.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="292" topLine="3" />
+		</Cursor>
+	</File>
+	<File name="src/yri-tree-html/yri-tree-html-PAGE-button.hpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="741" topLine="27" />
+		</Cursor>
+	</File>
+	<File name="src/yri-tree-html/yri-tree-html-node.hpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3939" topLine="172" />
+		</Cursor>
+	</File>
+	<File name="src/yri-tree-html/yri-tree-html-PAGE.hpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="618" topLine="24" />
+		</Cursor>
+	</File>
+	<File name="src/yri-tree-html/yri-tree-html-PAGE-button.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="405" topLine="8" />
+		</Cursor>
+	</File>
+	<File name="src/utils/YRI_CPP_UTILS.hpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4966" topLine="115" />
+		</Cursor>
+	</File>
+	<File name="src/YERITH_WEB_PAGES_GENERATOR_MAIN.hpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6475" topLine="195" />
+		</Cursor>
+	</File>
+	<File name="src/yri-tree-html/yri-tree-html-PAGE-menu-bar-headers.hpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1060" topLine="39" />
+		</Cursor>
+	</File>
+</CodeBlocks_layout_file>

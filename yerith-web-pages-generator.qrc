@@ -1,0 +1,7 @@
+<RCC>
+  <qresource>
+    <file>PAGES_TEMPLATE_FILE_PHP_html_css/yri_website_dsl-9.0-template.php</file>
+    <file>PAGES_TEMPLATE_FILE_PHP_html_css/YRI_TEMPLATE_DSL_Page_Header_Menu.php</file>
+    <file>PAGES_TEMPLATE_FILE_PHP_html_css/YRI_TEMPLATE_DSL_CSS_FILE.css</file>
+  </qresource>
+</RCC>

@@ -1,0 +1,69 @@
+
+yerith-web-pages-generator-MAIN YECEFOIQ-WEB-PAGES
+{
+
+	# We need this 'include' command to gain modularity; 		#
+  # and so to avoid very lenghty web pages specification 	#
+  # files.																								#
+	#include "a-web-html-specification-file.spec_html" 			#
+	
+
+	# THIS Describes the web html page 'index.ENDING' #
+	# of this website description file script. 				# 
+	web-html-page index
+	{
+		# KOMMENTARE: Bescreibung von dem Menu dass fuer diese Web-HTML Seite #
+		# 'index.ENDING' benutzt wird : 'yri_html_page_input_header_menu_bar'.#
+		yri_html_page_title: 'Bienvenue au centre de formation qualifiante Yecefoiq';
+
+		yri_html_page_input_header_menu_bar[web-html-page-menu-bar-headers];
+
+
+		yri_html_page_text_SECTION(HTML_HEADER_H/2; 'Description du Centre de Formation')
+		{
+			VARIABLE_YRI_PARAGRAPH variable_paragraph_1 
+				{text-yri-font-size = 11} : 
+				{text-yri-width-box = 8cm} ===
+					"Ce centre de formation en Informatique est la propriété de 
+				 	la start--up entrepreneuriale de Génie des Systèmes de 
+				 	Gestion Informatisés -YERITH RD-.
+
+					Les cours du centre de formation ont pour cibles les
+					personnes suivantes:"
+
+					li_begin: 'Travailleurs qualifiés en Informatique.'
+				  li: 'Travailleurs qualifiés en Sciences et en Génie.'
+				  li: 'Élèves et écoliers des établissements confessionnelles évangéliques.'
+			  	li: 'Étudiants dans les universités publiques confessionnelles évangéliques.' 
+					li_end: 'Étudiants dans les universités du monde moderne 
+						(incluant des catholiques orthodoxes).'
+
+					'Quelques cours et sujets divilgues dans des enseignements
+				  seront par exemple :
+					PHP_yri_List_from_file_on_Disk('cours_sample.txt');
+		};
+	};
+
+
+	web-html-page a_propos
+	{
+		yri_html_page_title: "A Propos de Yecefoiq";
+
+		yri_html_page_input_header_menu_bar[web-html-page-menu-bar-headers];
+
+	};
+
+
+	# Comment: Here are declared all web html pages 				#
+	# linked to this menubar widget.												#
+	web-html-page-menu-bar-headers
+	{
+		# vertical-left | vertical-right | horizontal-top 		#
+		web-html-page-menu-bar-headers_Position = 'vertical-left';
+		
+		yri_html_page_section[a_propos, 
+												  programme_des_cours, 
+													contenu_des_cours,
+													impressum];
+	};
+}

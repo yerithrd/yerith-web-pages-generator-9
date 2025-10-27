@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="yerith-web-pages-generator" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/yerith-web-pages-generator" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="src/YERITH_WEB_PAGES_GENERATOR_MAIN.cpp" />
+		<Unit filename="src/YERITH_WEB_PAGES_GENERATOR_MAIN.hpp" />
+		<Unit filename="src/utils/YRI_CPP_UTILS.cpp" />
+		<Unit filename="src/utils/YRI_CPP_UTILS.hpp" />
+		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-button.cpp" />
+		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-button.hpp" />
+		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-menu-bar-headers.cpp" />
+		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-menu-bar-headers.hpp" />
+		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-text-section.cpp" />
+		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-text-section.hpp" />
+		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE.cpp" />
+		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE.hpp" />
+		<Unit filename="src/yri-tree-html/yri-tree-html-node.cpp" />
+		<Unit filename="src/yri-tree-html/yri-tree-html-node.hpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
