@@ -267,6 +267,10 @@ private:
 
     QString                         _current_processed_HTML_Page_TItle;
 
+    QString                         _current_processed_HTML_Page___CSS_file_name;
+
+    QString                         _current_processed_HTML_Page___CSS_file_name_CONTENT;
+
     QString                         _current_processed_HTML_Page;
 
     QString                         _this_GENERATOR_specification_NAME;

@@ -662,6 +662,12 @@ void YERITH_WEB_PAGES_GENERATOR_MAIN::
     }
 
 
+    if (! YRI_CPP_UTILS::isEqualsCaseInsensitive(_current_processed_HTML_Page___CSS_file_name, _current_processed_HTML_Page))
+    {
+        _current_processed_HTML_Page___CSS_file_name = _current_processed_HTML_Page;
+    }
+
+
     YRITreeHTMLPage *_current_processed_HTML_Page_DS =
         _webhtmlpageFileNAME__To__web_html_pageDATASTRUCTURE.value(_current_processed_HTML_Page);
 

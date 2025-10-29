@@ -113,8 +113,7 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
             a_button = a_web_page_Current_Button___LIST->at(i);
 
             html_page_body_content_STRING
-                .append(a_button->generate_html_text_description())
-                .append("<br/>");
+                .append(a_button->generate_html_text_description());
         }
     }
 

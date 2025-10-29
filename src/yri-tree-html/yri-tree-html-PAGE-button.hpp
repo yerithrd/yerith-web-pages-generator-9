@@ -27,10 +27,9 @@ public:
         SET_containing_HTML_Page(a_containing_HTML_Page);
     }
 
-    inline YRITreeHTMLPageBUTTON()
-    :YRITreeHTMLNode()
-    {
-    }
+
+    YRITreeHTMLPageBUTTON();
+
 
     virtual inline ~YRITreeHTMLPageBUTTON()
     {
@@ -39,6 +38,9 @@ public:
 
 
     virtual QString generate_html_text_description();
+
+
+    virtual QString generate_CSS_File_Content_STRING();
 
 
     virtual QString print_debugging();
@@ -110,6 +112,22 @@ public:
     }
 
 
+    virtual inline void Set_Buuton_ID(uint an_id)
+    {
+        _button_ID = an_id;
+    }
+
+    virtual inline uint Get_Button_ID()
+    {
+        return _button_ID;
+    }
+
+    static inline QString Get___header_Content_CSS_File()
+    {
+        return _header_Content_CSS_File;
+    }
+
+
 protected:
 
     /**
@@ -117,9 +135,12 @@ protected:
      */
     uint            _text_section_HEADER_size;
 
+    uint            _button_ID;
 
     QString         _Button___Text;
 
+
+    static  QString  _header_Content_CSS_File;
 
     QString         _yri_font_size;
 
