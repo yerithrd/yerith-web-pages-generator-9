@@ -11,6 +11,8 @@
 #include "utils/YRI_CPP_UTILS.hpp"
 
 
+#include <QtCore/QDebug>
+
 
 QString  YRITreeHTMLPageBUTTON::_header_Content_CSS_File;
 
@@ -33,13 +35,32 @@ YRITreeHTMLPageBUTTON::YRITreeHTMLPageBUTTON()
 
 QString YRITreeHTMLPageBUTTON::generate_html_text_description()
 {
-    static uint first_call = 0;
+    static bool first_call = true;
 
-    _button_ID = first_call++;
+    static uint ID_for_button = 1;
 
-    return QString("<button type=\"button\" id=\"%1\">\"%2\"</button><br/>\n")
-           .arg(QString::number(_button_ID),
-                Get__button_text());
+    if (first_call)
+    {
+        _button_ID = 0;
+
+        first_call = false;
+    }
+    else
+    {
+        _button_ID = ID_for_button;
+
+        ++ID_for_button;
+    }
+
+    QString result =  QString("<button type=\"button\" id=\"%1\">\"%2\"</button><br/>\n")
+                        .arg(QString::number(Get_Button_ID()),
+                             Get__button_text());
+
+
+//    QDEBUG_STRING_OUTPUT_2("YRITreeHTMLPageBUTTON::generate_html_text_description()",
+//                            result);
+
+    return result;
 }
 
 
@@ -47,19 +68,21 @@ QString YRITreeHTMLPageBUTTON::generate_CSS_File_Content_STRING()
 {
     QString content;
 
-    content.append(".positioned-element-%1 {").arg(QString::number(Get_Button_ID()));
+    content.append(QString(".positioned-element-%1 {").arg(QString::number(Get_Button_ID())));
 
     content.append("position: absolute;\n")
-           .append("top: %1; /*Y coordinate*/\n").arg(Get__yri_button_Y_position_geometry());
+           .append(QString("top: %1; /*Y coordinate*/\n").arg(Get__yri_button_Y_position_geometry()));
 
-    content.append("left: %1; /*X coordinate*/\n").arg(Get__yri_button_X_position_geometry());
+    content.append(QString("left: %1; /*X coordinate*/\n").arg(Get__yri_button_X_position_geometry()));
 
     content.append("background-color: lightblue;\n")
            .append("padding: 10px\n")
            .append("}\n");
 
+//    qDebug() << "Get__yri_button_Y_position_geometry()"
+//             << Get__yri_button_Y_position_geometry();
 
-    _header_Content_CSS_File.append("\n\n")
+    _header_Content_CSS_File.append("\n")
                             .append(content);
 
 

@@ -156,13 +156,13 @@ public:
 
     virtual void PROCESS___yri_html_page___CURRENT___Widget_SET__button_text(QString button_for_text);
 
-    virtual void PROCESS___yri_html_page___CURRENT___Widget_button__SET_X(QString x);
+    virtual void PROCESS___yri_html_page___CURRENT___Widget_button__SET_X(QString xS);
 
-    virtual void PROCESS___yri_html_page___CURRENT___Widget_button__SET_Y(QString y);
+    virtual void PROCESS___yri_html_page___CURRENT___Widget_button__SET_Y(QString yS);
 
-    virtual void PROCESS___yri_html_page___CURRENT___Widget_button__SET_Width(QString width);
+    virtual void PROCESS___yri_html_page___CURRENT___Widget_button__SET_Width(QString widthS);
 
-    virtual void PROCESS___yri_html_page___CURRENT___Widget_button__SET_Height(QString height);
+    virtual void PROCESS___yri_html_page___CURRENT___Widget_button__SET_Height(QString heightS);
 
 
     virtual void
@@ -183,6 +183,8 @@ public:
                         (QString a_HTML_web_source_FILE_NAME,
                          QString a_HTML_web_source_CONTENT);
 
+
+    virtual QString generate_buttons_CSS___Content(QString directory_folder);
 
 
     virtual inline void SET___this_GENERATOR_specification_NAME

@@ -128,6 +128,8 @@ public:
     }
 
 
+    static  QString  _header_Content_CSS_File;
+
 protected:
 
     /**
@@ -139,8 +141,6 @@ protected:
 
     QString         _Button___Text;
 
-
-    static  QString  _header_Content_CSS_File;
 
     QString         _yri_font_size;
 

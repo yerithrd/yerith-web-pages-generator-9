@@ -100,6 +100,8 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
 
     YRITreeHTMLNode *next_html_node_child = 0;
 
+    QString dbgQString;
+
 
 //    qDebug() << "GET_htlm_PAGE_body_Content_STRING; size of get_children_NODES() : "
 //             << children_HTML_Page_ID___To___children_nodes.size();
@@ -112,11 +114,21 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
         {
             a_button = a_web_page_Current_Button___LIST->at(i);
 
-            html_page_body_content_STRING
-                .append(a_button->generate_html_text_description());
+            if (0 != a_button)
+            {
+                dbgQString = a_button->generate_html_text_description();
+
+                html_page_body_content_STRING
+                    .append(dbgQString);
+
+                //QDEBUG_STRING_OUTPUT_2("dbgQString-1", dbgQString);
+
+                dbgQString = a_button->generate_CSS_File_Content_STRING();
+
+                //QDEBUG_STRING_OUTPUT_2("dbgQString-2", dbgQString);
+            }
         }
     }
-
 
 
     while (it.hasNext())

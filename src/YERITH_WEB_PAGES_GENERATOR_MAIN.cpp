@@ -603,10 +603,12 @@ void YERITH_WEB_PAGES_GENERATOR_MAIN::
 
 
 void YERITH_WEB_PAGES_GENERATOR_MAIN::
-                PROCESS___yri_html_page___CURRENT___Widget_button__SET_X(QString x)
+                PROCESS___yri_html_page___CURRENT___Widget_button__SET_X(QString xS)
 {
     if (0 != _web_page_Current_PROCESSED_button)
     {
+        QString x = xS.replace("'", "");
+
         _web_page_Current_PROCESSED_button
             ->SET__yri_button_X_position_geometry(x);
 
@@ -617,21 +619,26 @@ void YERITH_WEB_PAGES_GENERATOR_MAIN::
 
 
 void YERITH_WEB_PAGES_GENERATOR_MAIN::
-                PROCESS___yri_html_page___CURRENT___Widget_button__SET_Y(QString y)
+                PROCESS___yri_html_page___CURRENT___Widget_button__SET_Y(QString yS)
 {
     if (0 != _web_page_Current_PROCESSED_button)
     {
+        //QDEBUG_STRING_OUTPUT_2("PROCESS___yri_html_page___CURRENT___Widget_button__SET_Y", y);
+        QString y = yS.replace("'", "");
+
         _web_page_Current_PROCESSED_button
-            ->SET__yri_button_X_position_geometry(y);
+            ->SET__yri_button_Y_position_geometry(y);
     }
 }
 
 
 void YERITH_WEB_PAGES_GENERATOR_MAIN::
-                PROCESS___yri_html_page___CURRENT___Widget_button__SET_Width(QString width)
+                PROCESS___yri_html_page___CURRENT___Widget_button__SET_Width(QString widthS)
 {
     if (0 != _web_page_Current_PROCESSED_button)
     {
+        QString width = widthS.replace("'", "");
+
         _web_page_Current_PROCESSED_button
             ->SET__yri_button_WIDTH(width);
     }
@@ -639,10 +646,12 @@ void YERITH_WEB_PAGES_GENERATOR_MAIN::
 
 
 void YERITH_WEB_PAGES_GENERATOR_MAIN::
-                PROCESS___yri_html_page___CURRENT___Widget_button__SET_Height(QString height)
+                PROCESS___yri_html_page___CURRENT___Widget_button__SET_Height(QString heightS)
 {
     if (0 != _web_page_Current_PROCESSED_button)
     {
+        QString height = heightS.replace("'", "");
+
         _web_page_Current_PROCESSED_button
             ->SET__yri_button_HEIGTH(height);
 
@@ -737,6 +746,28 @@ QString YERITH_WEB_PAGES_GENERATOR_MAIN::
 						  a_HTML_web_source_CONTENT);
 
 	return a_HTML_web_source_CONTENT;
+}
+
+
+QString YERITH_WEB_PAGES_GENERATOR_MAIN::generate_buttons_CSS___Content(QString directory_folder)
+{
+    QString header_Content_CSS___File = YRITreeHTMLPageBUTTON::Get___header_Content_CSS_File();
+
+//    qDebug() << "header_Content_CSS___File: "
+//             <<  header_Content_CSS___File;
+
+    QString button_page_CSS = QString("%1/%2.css")
+                                .arg(directory_folder,
+                                     _current_processed_HTML_Page___CSS_file_name);
+
+    save_yri_SOURCE_FILES(button_page_CSS,
+                          header_Content_CSS___File);
+
+//    qDebug() << "button_page_CSS: "
+//             <<  button_page_CSS;
+
+
+    return header_Content_CSS___File;
 }
 
 
