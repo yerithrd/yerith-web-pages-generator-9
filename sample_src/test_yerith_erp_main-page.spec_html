@@ -41,7 +41,7 @@ yerith-web-pages-generator-MAIN YERITHERPPGIPlatinum
 
 		yri_html_page_Widget_button ('Point\n
 																	de\n
-																	Vente') 																	{ '514'; '308`'; '103'; '89' };
+																	Vente') 																	{ '514'; '308'; '103'; '89' };
 		
 	};
 
