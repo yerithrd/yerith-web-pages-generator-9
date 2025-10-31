@@ -64,9 +64,15 @@ public:
     }
 
 
+
     virtual inline void SET__yri_button_X_position_geometry(QString A_yri_button_X_position_geometry)
     {
         _yri_button_X_position_geometry = A_yri_button_X_position_geometry;
+    }
+
+    virtual inline int Get__yri_button_X_position_geometry_integer_value()
+    {
+        return _yri_button_X_position_geometry.toInt();
     }
 
     virtual inline QString Get__yri_button_X_position_geometry()
@@ -75,9 +81,15 @@ public:
     }
 
 
+
     virtual inline void SET__yri_button_Y_position_geometry(QString A_yri_button_Y_position_geometry)
     {
         _yri_button_Y_position_geometry = A_yri_button_Y_position_geometry;
+    }
+
+    virtual inline int Get__yri_button_Y_position_geometry_integer_value()
+    {
+        return _yri_button_Y_position_geometry.toInt();
     }
 
     virtual inline QString Get__yri_button_Y_position_geometry()

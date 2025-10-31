@@ -23,11 +23,12 @@ YRITreeHTMLPageBUTTON::YRITreeHTMLPageBUTTON(YRITreeHTMLPage *a_containing_HTML_
     if (_header_Content_CSS_File.isEmpty())
     {
         _header_Content_CSS_File.append(".button {\n")
-                                .append("border: none; \n")
-                                .append("padding: 15px 32px;\n")
+                                .append("height: 90px;\n")
+                                .append("width: 100px;\n")
+                                .append("padding: 32px 15px;\n")
                                 .append("text-align: center;\n")
                                 .append("text-decoration: none;\n")
-                                .append("font-size: 16px;\n")
+                                .append("font-size: 7px;\n")
                                 .append("}\n\n");
     }
 
@@ -38,16 +39,14 @@ YRITreeHTMLPageBUTTON::YRITreeHTMLPageBUTTON(YRITreeHTMLPage *a_containing_HTML_
 YRITreeHTMLPageBUTTON::YRITreeHTMLPageBUTTON()
 :YRITreeHTMLNode()
 {
-    _header_Content_CSS_File.append(".button {\n")
-                            .append("border: none; \n")
-                            .append("padding: 15px 32px;\n")
-                            .append("text-align: center;\n")
-                            .append("text-decoration: none;\n")
-                            .append("display: inline-block;\n")
-                            .append("font-size: 16px;\n")
-                            .append("margin: 4px 2px;\n")
-                            .append("cursor: pointer;\n")
-                            .append("}\n\n");
+        _header_Content_CSS_File.append(".button {\n")
+                                .append("height: 90px;\n")
+                                .append("width: 100px;\n")
+                                .append("padding: 32px 15px;\n")
+                                .append("text-align: center;\n")
+                                .append("text-decoration: none;\n")
+                                .append("font-size: 7px;\n")
+                                .append("}\n\n");
 }
 
 
@@ -86,17 +85,26 @@ QString YRITreeHTMLPageBUTTON::generate_html_text_description()
 
 QString YRITreeHTMLPageBUTTON::generate_CSS_File_Content_STRING()
 {
+    int yri_button_X_position_geometry_integer_value = Get__yri_button_X_position_geometry_integer_value();
+
+    int yri_button_Y_position_geometry_integer_value = Get__yri_button_Y_position_geometry_integer_value();
+
+
+    int x_position = 0 + yri_button_X_position_geometry_integer_value;
+
+    int y_position = 0 + yri_button_Y_position_geometry_integer_value;
+
+
     QString content;
 
     content.append(QString(".positioned-element-%1 {").arg(QString::number(Get_Button_ID())));
 
     content.append("position: absolute;\n")
-           .append(QString("top: %1px; /*Y coordinate*/\n").arg(Get__yri_button_Y_position_geometry()));
+           .append(QString("top: %1px; /*Y coordinate*/\n").arg(QString::number(y_position)));
 
-    content.append(QString("left: %1px; /*X coordinate*/\n").arg(Get__yri_button_X_position_geometry()));
+    content.append(QString("left: %1px; /*X coordinate*/\n").arg(QString::number(x_position)));
 
     content.append("background-color: lightblue;\n")
-           .append("padding: 10px\n")
            .append("}\n");
 
 //    qDebug() << "Get__yri_button_Y_position_geometry()"
