@@ -17,6 +17,24 @@
 QString  YRITreeHTMLPageBUTTON::_header_Content_CSS_File;
 
 
+YRITreeHTMLPageBUTTON::YRITreeHTMLPageBUTTON(YRITreeHTMLPage *a_containing_HTML_Page)
+:YRITreeHTMLNode()
+{
+    if (_header_Content_CSS_File.isEmpty())
+    {
+        _header_Content_CSS_File.append(".button {\n")
+                                .append("border: none; \n")
+                                .append("padding: 15px 32px;\n")
+                                .append("text-align: center;\n")
+                                .append("text-decoration: none;\n")
+                                .append("font-size: 16px;\n")
+                                .append("}\n\n");
+    }
+
+    SET_containing_HTML_Page(a_containing_HTML_Page);
+}
+
+
 YRITreeHTMLPageBUTTON::YRITreeHTMLPageBUTTON()
 :YRITreeHTMLNode()
 {
@@ -52,8 +70,10 @@ QString YRITreeHTMLPageBUTTON::generate_html_text_description()
         ++ID_for_button;
     }
 
-    QString result =  QString("<button type=\"button\" id=\"%1\">\"%2\"</button><br/>\n")
-                        .arg(QString::number(Get_Button_ID()),
+    QString result =  QString("<button type=\"button\" class=\"%1\" id=\"%2\">\"%3\"</button><br/>\n")
+                        .arg(QString("button positioned-element-%1")
+                                .arg(QString::number(Get_Button_ID())),
+                             QString::number(Get_Button_ID()),
                              Get__button_text());
 
 

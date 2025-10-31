@@ -21,11 +21,7 @@ class YRITreeHTMLPageBUTTON : public YRITreeHTMLNode
 public:
 
 
-    inline YRITreeHTMLPageBUTTON(YRITreeHTMLPage *a_containing_HTML_Page)
-    :YRITreeHTMLNode()
-    {
-        SET_containing_HTML_Page(a_containing_HTML_Page);
-    }
+    YRITreeHTMLPageBUTTON(YRITreeHTMLPage *a_containing_HTML_Page);
 
 
     YRITreeHTMLPageBUTTON();
