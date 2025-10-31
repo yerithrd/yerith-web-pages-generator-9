@@ -2,7 +2,7 @@
 yerith-web-pages-generator-MAIN YERITHERPPGIPlatinum
 {
 
-	web-html-page main_window {
+	web-html-page index {
 		# 'yerith-erp-main-window.ui' #
 		yri_html_page_title: 'Bienvenue !';
 		yri_html_page_MENU_BAR_link_string: 'yerith-erp-main-window.ui';

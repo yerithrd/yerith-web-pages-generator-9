@@ -91,9 +91,9 @@ QString YRITreeHTMLPageBUTTON::generate_CSS_File_Content_STRING()
     content.append(QString(".positioned-element-%1 {").arg(QString::number(Get_Button_ID())));
 
     content.append("position: absolute;\n")
-           .append(QString("top: %1; /*Y coordinate*/\n").arg(Get__yri_button_Y_position_geometry()));
+           .append(QString("top: %1px; /*Y coordinate*/\n").arg(Get__yri_button_Y_position_geometry()));
 
-    content.append(QString("left: %1; /*X coordinate*/\n").arg(Get__yri_button_X_position_geometry()));
+    content.append(QString("left: %1px; /*X coordinate*/\n").arg(Get__yri_button_X_position_geometry()));
 
     content.append("background-color: lightblue;\n")
            .append("padding: 10px\n")
