@@ -110,7 +110,7 @@ lex.o yri_main.o		: tok.h
 
 clean:
 	rm -rf *_previously*
-	rm -f ${OBJ_DIR}/* \
+	rm -rf ${OBJ_DIR}/* \
 		${OBJ_DIR}/utils/*.o \
 		${OBJ_DIR}/yri-tree-html/*.o \
 		*.o \
