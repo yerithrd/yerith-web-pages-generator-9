@@ -171,7 +171,17 @@ public:
         PROCESS_Current__yri_html_page_Widget_button();
 
 
+
     // Processing label text
+    virtual void PROCESS___yri_html_page___CURRENT___Widget_labelText__SET_X(QString xS);
+
+    virtual void PROCESS___yri_html_page___CURRENT___Widget_labelText__SET_Y(QString yS);
+
+    virtual void PROCESS___yri_html_page___CURRENT___Widget_labelText__SET_Width(QString widthS);
+
+    virtual void PROCESS___yri_html_page___CURRENT___Widget_labelText__SET_Height(QString heightS);
+
+
     virtual void PROCESS_Current__yri_html_page_Widget_Label_text(QString labelText);
 
 
@@ -216,6 +226,12 @@ public:
     virtual inline QString Get___header_menu_bar_SPECIFICATION_name_in_file()
     {
         return _header_menu_bar_SPECIFICATION_name_in_file;
+    }
+
+
+    virtual inline QList<YRITreeHTMLPageLABELText *> *Get___web_page_Current_LabelText___LIST()
+    {
+        return _web_page_Current_Label_Text___LIST;
     }
 
 
@@ -290,7 +306,7 @@ private:
 
     YRITreeHTMLPageLABELText        *_web_page_Current_PROCESSED_Label_Text;
 
-    QList<YRITreeHTMLPageLABELText> *_web_page_Current_Label_Text___LIST;
+    QList<YRITreeHTMLPageLABELText *> *_web_page_Current_Label_Text___LIST;
 
 
     YRITreeHTMLPageBUTTON           *_web_page_Current_PROCESSED_button;

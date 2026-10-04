@@ -697,9 +697,98 @@ void YERITH_WEB_PAGES_GENERATOR_MAIN::
 }
 
 
+
+void YERITH_WEB_PAGES_GENERATOR_MAIN::
+                PROCESS___yri_html_page___CURRENT___Widget_labelText__SET_X(QString xS)
+{
+    if (0 != _web_page_Current_PROCESSED_Label_Text)
+    {
+        QString x = xS.replace("'", "");
+
+        _web_page_Current_PROCESSED_Label_Text
+            ->SET__yri_label_text_X_position_geometry(x);
+
+//        _web_page_Current_PROCESSED_Label_Text
+//            ->print_debugging();
+    }
+}
+
+
+void YERITH_WEB_PAGES_GENERATOR_MAIN::
+                PROCESS___yri_html_page___CURRENT___Widget_labelText__SET_Y(QString yS)
+{
+    if (0 != _web_page_Current_PROCESSED_Label_Text)
+    {
+        //QDEBUG_STRING_OUTPUT_2("PROCESS___yri_html_page___CURRENT___Widget_labelText__SET_Y", y);
+        QString y = yS.replace("'", "");
+
+        _web_page_Current_PROCESSED_Label_Text
+            ->SET__yri_label_text_Y_position_geometry(y);
+    }
+}
+
+
+void YERITH_WEB_PAGES_GENERATOR_MAIN::
+                PROCESS___yri_html_page___CURRENT___Widget_labelText__SET_Width(QString widthS)
+{
+    if (0 != _web_page_Current_PROCESSED_Label_Text)
+    {
+        QString width = widthS.replace("'", "");
+
+        _web_page_Current_PROCESSED_Label_Text
+            ->SET__yri_label_text_WIDTH(width);
+    }
+}
+
+
+void YERITH_WEB_PAGES_GENERATOR_MAIN::
+                PROCESS___yri_html_page___CURRENT___Widget_labelText__SET_Height(QString heightS)
+{
+    if (0 != _web_page_Current_PROCESSED_Label_Text)
+    {
+        QString height = heightS.replace("'", "");
+
+        _web_page_Current_PROCESSED_Label_Text
+            ->SET__yri_label_text_HEIGTH(height);
+
+        //QDEBUG_STRING_OUTPUT_1("text debugging !");
+
+//        _web_page_Current_PROCESSED_Label_Text->print_debugging();
+    }
+}
+
+
 void YERITH_WEB_PAGES_GENERATOR_MAIN::PROCESS_Current__yri_html_page_Widget_Label_text(QString labelText)
 {
+    if (0 == _web_page_Current_Label_Text___LIST)
+    {
+        _web_page_Current_Label_Text___LIST = new QList<YRITreeHTMLPageLABELText *>();
+    }
 
+
+    if (! YRI_CPP_UTILS::isEqualsCaseInsensitive(_current_processed_HTML_Page___CSS_file_name, _current_processed_HTML_Page))
+    {
+        _current_processed_HTML_Page___CSS_file_name = _current_processed_HTML_Page;
+    }
+
+
+    YRITreeHTMLPage *_current_processed_HTML_Page_DS =
+        _webhtmlpageFileNAME__To__web_html_pageDATASTRUCTURE.value(_current_processed_HTML_Page);
+
+
+    YRITreeHTMLPageLABELText *a_Labeled_Text = new YRITreeHTMLPageLABELText(_current_processed_HTML_Page_DS);
+
+    a_Labeled_Text->SET__label_text(labelText);
+
+
+    _web_page_Current_Label_Text___LIST->append(a_Labeled_Text);
+
+
+//    QDEBUG_STRING_OUTPUT_2_N("PROCESS_Current__yri_html_page_Widget_Label_text | size",
+//                              _web_page_Current_Label_Text___LIST->size());
+
+
+    _web_page_Current_PROCESSED_Label_Text = a_Labeled_Text;
 }
 
 
@@ -759,7 +848,10 @@ QString YERITH_WEB_PAGES_GENERATOR_MAIN::
 
 QString YERITH_WEB_PAGES_GENERATOR_MAIN::generate_buttons_CSS___Content(QString directory_folder)
 {
-    QString header_Content_CSS___File = YRITreeHTMLPageBUTTON::Get___header_Content_CSS_File();
+    QString header_Content_CSS___File;
+
+    header_Content_CSS___File.append(YRITreeHTMLPageLABELText::Get___header_Content_CSS_File());
+    header_Content_CSS___File.append(YRITreeHTMLPageBUTTON::Get___header_Content_CSS_File());
 
 //    qDebug() << "header_Content_CSS___File: "
 //             <<  header_Content_CSS___File;

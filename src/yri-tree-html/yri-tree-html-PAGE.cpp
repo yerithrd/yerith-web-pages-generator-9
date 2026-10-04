@@ -9,6 +9,8 @@
 #include "yri-tree-html-PAGE.hpp"
 
 
+#include "yri-tree-html-PAGE-label-text.hpp"
+
 #include "yri-tree-html-PAGE-button.hpp"
 
 #include "yri-tree-html-PAGE-text-section.hpp"
@@ -83,10 +85,16 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
     QString html_page_body_content_STRING;
 
 
+    QList<YRITreeHTMLPageLABELText *> *a_web_page_Current_LabelText___LIST = 0;
+
     QList<YRITreeHTMLPageBUTTON *> *a_web_page_Current_Button___LIST = 0;
+
 
     if (0 != _main_generator_pointer)
     {
+        a_web_page_Current_LabelText___LIST =
+                    _main_generator_pointer->Get___web_page_Current_LabelText___LIST();
+
         a_web_page_Current_Button___LIST =
                     _main_generator_pointer->Get___web_page_Current_Button___LIST();
     }
@@ -105,6 +113,32 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
 
 //    qDebug() << "GET_htlm_PAGE_body_Content_STRING; size of get_children_NODES() : "
 //             << children_HTML_Page_ID___To___children_nodes.size();
+
+
+    YRITreeHTMLPageLABELText *a_label_text= 0;
+
+    if (0 != a_web_page_Current_LabelText___LIST)
+    {
+        for (uint i = 0; i < a_web_page_Current_LabelText___LIST->size(); ++i)
+        {
+            a_label_text = a_web_page_Current_LabelText___LIST->at(i);
+
+            if (0 != a_label_text)
+            {
+                dbgQString = a_label_text->generate_html_text_description();
+
+                html_page_body_content_STRING
+                    .append(dbgQString);
+
+                //QDEBUG_STRING_OUTPUT_2("dbgQString-1", dbgQString);
+
+                dbgQString = a_label_text->generate_CSS_File_Content_STRING();
+
+                //QDEBUG_STRING_OUTPUT_2("dbgQString-2", dbgQString);
+            }
+        }
+    }
+
 
     YRITreeHTMLPageBUTTON *a_button = 0;
 

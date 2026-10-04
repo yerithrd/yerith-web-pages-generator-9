@@ -53,16 +53,13 @@ QString YRITreeHTMLPageLABELText::generate_html_text_description()
         ++ID_for_Label_text;
     }
 
-//    QString result =  QString("<button type=\"button\" class=\"%1\" id=\"%2\">\"%3\"</button><br/>\n")
-//                        .arg(QString("button positioned-element-%1")
-//                                .arg(QString::number(Get_Button_ID())),
-//                             QString::number(Get_Button_ID()),
-//                             Get__button_text());
+    QString result =  QString("<div id=\"labeled-text-id%1\">%2</div>\n")
+                        .arg(QString::number(Get_Label_text_ID()),
+                             Get__label_text());
 
 
 //    QDEBUG_STRING_OUTPUT_2("YRITreeHTMLPageLABELText::generate_html_text_description()",
 //                            result);
-    QString result;
 
     return result;
 }
@@ -70,7 +67,37 @@ QString YRITreeHTMLPageLABELText::generate_html_text_description()
 
 QString YRITreeHTMLPageLABELText::generate_CSS_File_Content_STRING()
 {
+    int yri_label_text_X_position_geometry_integer_value = Get__yri_label_text_X_position_geometry_integer_value();
+
+    int yri_label_text_Y_position_geometry_integer_value = Get__yri_label_text_Y_position_geometry_integer_value();
+
+
+    int x_position = 0 + yri_label_text_X_position_geometry_integer_value;
+
+    int y_position = 7 + yri_label_text_Y_position_geometry_integer_value;
+
+    QString width_value = Get__yri_label_text_WIDTH();
+
+
     QString content;
+
+    content.append(QString("#labeled-text-id%1{\n").arg(QString::number(Get_Label_text_ID())));
+
+    content.append("position: absolute;\n")
+           .append(QString("width: %1px; /*width value*/\n").arg(width_value));
+
+    content.append("margin: 0 auto;\n");
+
+
+    //content.append(QString("left: %1px; /*X coordinate*/\n").arg(QString::number(x_position)));
+
+    content.append("}\n");
+
+//    qDebug() << "Get__yri_button_Y_position_geometry()"
+//             << Get__yri_button_Y_position_geometry();
+
+    _header_Content_CSS_File.append("\n")
+                            .append(content);
 
     return content;
 }
