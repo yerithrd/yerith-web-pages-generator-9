@@ -16,6 +16,8 @@
 #include "utils/YRI_CPP_UTILS.hpp"
 
 
+#include "yri-tree-html/yri-tree-html-PAGE-label-text.hpp"
+
 #include "yri-tree-html/yri-tree-html-PAGE-button.hpp"
 
 #include "yri-tree-html/yri-tree-html-node.hpp"
@@ -692,6 +694,12 @@ void YERITH_WEB_PAGES_GENERATOR_MAIN::
 
 
     _web_page_Current_PROCESSED_button = a_button;
+}
+
+
+void YERITH_WEB_PAGES_GENERATOR_MAIN::PROCESS_Current__yri_html_page_Widget_Label_text(QString labelText)
+{
+
 }
 
 

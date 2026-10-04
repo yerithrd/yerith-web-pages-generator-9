@@ -8,6 +8,7 @@ OBJS	= bison.o lex.o yri_main.o \
 				${OBJ_DIR}/qrc_yerith-web-pages-generator.o \
 				${OBJ_DIR}/yri-tree-html/yri-tree-html-node.o \
 				${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE.o \
+				${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE-label-text.o \
 				${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE-button.o \
 				${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE-text-section.o \
 				${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE-menu-bar-headers.o \
@@ -56,6 +57,10 @@ ${OBJ_DIR}/yri-tree-html/yri-tree-html-node.o:		${SRC}/yri-tree-html/yri-tree-ht
 ${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE.o:		${SRC}/yri-tree-html/yri-tree-html-PAGE.cpp
 		mkdir -p ${OBJ_DIR}/yri-tree-html
 		$(CC) $(CFLAGS) -c ${SRC}/yri-tree-html/yri-tree-html-PAGE.cpp 	-o ${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE.o
+
+${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE-label-text.o:		${SRC}/yri-tree-html/yri-tree-html-PAGE-label-text.cpp
+		mkdir -p ${OBJ_DIR}/yri-tree-html
+		$(CC) $(CFLAGS) -c ${SRC}/yri-tree-html/yri-tree-html-PAGE-label-text.cpp 	-o ${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE-label-text.o
 
 ${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE-button.o:		${SRC}/yri-tree-html/yri-tree-html-PAGE-button.cpp
 		mkdir -p ${OBJ_DIR}/yri-tree-html

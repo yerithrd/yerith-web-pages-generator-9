@@ -16,6 +16,7 @@
 #include <QtCore/QString>
 
 
+class YRITreeHTMLPageLABELText;
 
 class YRITreeHTMLPageBUTTON;
 
@@ -154,6 +155,7 @@ public:
                             (QString htmlPageMenuBarHeaders__POSITION);
 
 
+    // Processing button
     virtual void PROCESS___yri_html_page___CURRENT___Widget_SET__button_text(QString button_for_text);
 
     virtual void PROCESS___yri_html_page___CURRENT___Widget_button__SET_X(QString xS);
@@ -167,6 +169,11 @@ public:
 
     virtual void
         PROCESS_Current__yri_html_page_Widget_button();
+
+
+    // Processing label text
+    virtual void PROCESS_Current__yri_html_page_Widget_Label_text(QString labelText);
+
 
 
     virtual void
@@ -278,6 +285,12 @@ private:
     QString                         _this_GENERATOR_specification_NAME;
 
     QString                         _header_menu_bar_SPECIFICATION_name_in_file;
+
+
+
+    YRITreeHTMLPageLABELText        *_web_page_Current_PROCESSED_Label_Text;
+
+    QList<YRITreeHTMLPageLABELText> *_web_page_Current_Label_Text___LIST;
 
 
     YRITreeHTMLPageBUTTON           *_web_page_Current_PROCESSED_button;
