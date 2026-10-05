@@ -9,7 +9,7 @@ yerith-web-pages-generator-MAIN YERITHERPPGIPlatinum
 		yri_html_page_input_header_menu_bar[web-html-page-menu-bar-headers];
 
 
-		yri_html_page_Widget_label_text ('YERITH-ERP-9.0-platiNum') 						{ '90'; '70'; '150'; '90' };	
+		yri_html_page_Widget_label_text ('YERITH-ERP-9.0-platiNum') 						{ '103'; '70'; '200'; '200' };	
 		
 	
 		yri_html_page_Widget_button ('RH \n Fournisseurs') 											{ '193'; '122'; '103'; '89' };

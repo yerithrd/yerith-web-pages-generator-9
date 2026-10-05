@@ -25,6 +25,8 @@
 		<Unit filename="src/utils/YRI_CPP_UTILS.hpp" />
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-button.cpp" />
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-button.hpp" />
+		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-label-text.cpp" />
+		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-label-text.hpp" />
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-menu-bar-headers.cpp" />
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-menu-bar-headers.hpp" />
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-text-section.cpp" />

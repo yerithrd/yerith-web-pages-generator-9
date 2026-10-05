@@ -82,6 +82,8 @@ QString YRITreeHTMLPageLABELText::generate_CSS_File_Content_STRING()
 
     QString width_value = Get__yri_label_text_WIDTH();
 
+    QString heigth_value = Get__yri_label_text_HEIGTH();
+
 
     QString content;
 
@@ -89,17 +91,16 @@ QString YRITreeHTMLPageLABELText::generate_CSS_File_Content_STRING()
 
     content.append("position: absolute;\n")
            .append(QString("top: %1px; /*Y coordinate*/\n").arg(QString::number(y_position)))
-           .append(QString("left: %1px; /*X coordinate*/\n").arg(QString::number(x_position)));
-//           .append(QString("width: %1px; /*width value*/\n").arg(width_value));
+           .append(QString("left: %1px; /*X coordinate*/\n").arg(QString::number(x_position)))
+           .append(QString("width: %1px; /*width value*/\n").arg(width_value))
+           .append(QString("heigth: %1px; /*heigth value*/\n").arg(heigth_value));
 
-    //content.append("margin: 0 auto;\n");
+    content.append("}\n\n");
 
-    content.append("}\n");
-
-//    qDebug() << "Get__yri_label_text_Y_position_geometry()"
-//             << Get__yri_label_text_Y_position_geometry()
-//             << "\nGet__yri_label_text_X_position_geometry()"
-//             << Get__yri_label_text_X_position_geometry();
+//    qDebug() << "Get__yri_label_text_WIDTH()"
+//             << Get__yri_label_text_WIDTH()
+//             << "\nGet__yri_label_text_HEIGTH()"
+//             << Get__yri_label_text_HEIGTH();
 
     _header_Content_CSS_File.append("\n")
                             .append(content);
