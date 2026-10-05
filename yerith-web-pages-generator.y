@@ -173,7 +173,7 @@ yri_html_web_html_page_BODY_spec
 				RIGHT_PARENTHESIS_TOK 
 					LEFT_BRACE_TOK  
 						STRING_TOK SEMI_COLON_TOK	STRING_TOK SEMI_COLON_TOK STRING_TOK					{ a_web_page_generator_main_page->PROCESS___yri_html_page___CURRENT___Widget_labelText__SET_X($8->c_str());
-																																											a_web_page_generator_main_page->PROCESS___yri_html_page___CURRENT___Widget_labelText__SET_X($10->c_str());
+																																											a_web_page_generator_main_page->PROCESS___yri_html_page___CURRENT___Widget_labelText__SET_Y($10->c_str());
 																																											a_web_page_generator_main_page->PROCESS___yri_html_page___CURRENT___Widget_labelText__SET_Width($12->c_str()); }
 							SEMI_COLON_TOK STRING_TOK																							{ a_web_page_generator_main_page->PROCESS___yri_html_page___CURRENT___Widget_labelText__SET_Height($15->c_str()); }
 					RIGHT_BRACE_TOK																														{ } 

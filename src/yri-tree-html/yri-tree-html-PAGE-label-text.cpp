@@ -53,9 +53,13 @@ QString YRITreeHTMLPageLABELText::generate_html_text_description()
         ++ID_for_Label_text;
     }
 
-    QString result =  QString("<div id=\"labeled-text-id%1\">%2</div>\n")
+    QString result =  QString("<button type=\"button\" id=\"labeled-text-id%1\">\"%2\"</button><br/>\n")
                         .arg(QString::number(Get_Label_text_ID()),
                              Get__label_text());
+
+//    QString result =  QString("<div id=\"labeled-text-id%1\">%2</div>\n")
+//                        .arg(QString::number(Get_Label_text_ID()),
+//                             Get__label_text());
 
 
 //    QDEBUG_STRING_OUTPUT_2("YRITreeHTMLPageLABELText::generate_html_text_description()",
@@ -74,7 +78,7 @@ QString YRITreeHTMLPageLABELText::generate_CSS_File_Content_STRING()
 
     int x_position = 0 + yri_label_text_X_position_geometry_integer_value;
 
-    int y_position = 7 + yri_label_text_Y_position_geometry_integer_value;
+    int y_position = 0 + yri_label_text_Y_position_geometry_integer_value;
 
     QString width_value = Get__yri_label_text_WIDTH();
 
@@ -84,17 +88,18 @@ QString YRITreeHTMLPageLABELText::generate_CSS_File_Content_STRING()
     content.append(QString("#labeled-text-id%1{\n").arg(QString::number(Get_Label_text_ID())));
 
     content.append("position: absolute;\n")
-           .append(QString("width: %1px; /*width value*/\n").arg(width_value));
+           .append(QString("top: %1px; /*Y coordinate*/\n").arg(QString::number(y_position)))
+           .append(QString("left: %1px; /*X coordinate*/\n").arg(QString::number(x_position)));
+//           .append(QString("width: %1px; /*width value*/\n").arg(width_value));
 
-    content.append("margin: 0 auto;\n");
-
-
-    //content.append(QString("left: %1px; /*X coordinate*/\n").arg(QString::number(x_position)));
+    //content.append("margin: 0 auto;\n");
 
     content.append("}\n");
 
-//    qDebug() << "Get__yri_button_Y_position_geometry()"
-//             << Get__yri_button_Y_position_geometry();
+//    qDebug() << "Get__yri_label_text_Y_position_geometry()"
+//             << Get__yri_label_text_Y_position_geometry()
+//             << "\nGet__yri_label_text_X_position_geometry()"
+//             << Get__yri_label_text_X_position_geometry();
 
     _header_Content_CSS_File.append("\n")
                             .append(content);
