@@ -110,12 +110,12 @@ public:
     }
 
 
-    virtual inline void SET__yri_element_HEIGHT(QString A_yri_element_HEIGTH)
+    virtual inline void SET__yri_element_HEIGHT(QString A_yri_element_HEIGHT)
     {
-        _yri_element_HEIGTH = A_yri_element_HEIGTH;
+        _yri_element_HEIGTH = A_yri_element_HEIGHT;
     }
 
-    virtual inline QString Get__yri_element_HEIGTH()
+    virtual inline QString Get__yri_element_HEIGHT()
     {
         return _yri_element_HEIGTH;
     }

@@ -81,7 +81,7 @@ QString YRITreeHTMLPageLABELText::generate_CSS_File_Content_STRING()
 
     QString width_value = Get__yri_element_WIDTH();
 
-    QString heigth_value = Get__yri_element_HEIGTH();
+    QString heigth_value = Get__yri_element_HEIGHT();
 
 
     QString content;
