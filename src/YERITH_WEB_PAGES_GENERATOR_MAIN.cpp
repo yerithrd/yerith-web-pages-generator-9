@@ -16,6 +16,8 @@
 #include "utils/YRI_CPP_UTILS.hpp"
 
 
+#include "yri-tree-html/yri-tree-html-PAGE-ELEMENT.hpp"
+
 #include "yri-tree-html/yri-tree-html-PAGE-label-text.hpp"
 
 #include "yri-tree-html/yri-tree-html-PAGE-button.hpp"
@@ -592,74 +594,74 @@ void YERITH_WEB_PAGES_GENERATOR_MAIN::
 
 
 void YERITH_WEB_PAGES_GENERATOR_MAIN::
-                PROCESS___yri_html_page___CURRENT___Widget_SET__button_text(QString button_for_text)
+                PROCESS___yri_html_page___CURRENT___Widget_SET__Element_text(QString button_for_text)
 {
-    if (0 != _web_page_Current_PROCESSED_button)
+    if (0 != _web_page_Current_PROCESSED_Element)
     {
         button_for_text.replace("\\n", "<br/>");
 
-        _web_page_Current_PROCESSED_button
-            ->SET__button_text(button_for_text);
+        _web_page_Current_PROCESSED_Element
+            ->SET__element_text(button_for_text);
     }
 }
 
 
 void YERITH_WEB_PAGES_GENERATOR_MAIN::
-                PROCESS___yri_html_page___CURRENT___Widget_button__SET_X(QString xS)
+                PROCESS___yri_html_page___CURRENT___Widget_Element__SET_X(QString xS)
 {
-    if (0 != _web_page_Current_PROCESSED_button)
+    if (0 != _web_page_Current_PROCESSED_Element)
     {
         QString x = xS.replace("'", "");
 
-        _web_page_Current_PROCESSED_button
-            ->SET__yri_button_X_position_geometry(x);
+        _web_page_Current_PROCESSED_Element
+            ->SET__yri_element_X_position_geometry(x);
 
-//        _web_page_Current_PROCESSED_button
+//        _web_page_Current_PROCESSED_Element
 //            ->print_debugging();
     }
 }
 
 
 void YERITH_WEB_PAGES_GENERATOR_MAIN::
-                PROCESS___yri_html_page___CURRENT___Widget_button__SET_Y(QString yS)
+                PROCESS___yri_html_page___CURRENT___Widget_Element__SET_Y(QString yS)
 {
-    if (0 != _web_page_Current_PROCESSED_button)
+    if (0 != _web_page_Current_PROCESSED_Element)
     {
         //QDEBUG_STRING_OUTPUT_2("PROCESS___yri_html_page___CURRENT___Widget_button__SET_Y", y);
         QString y = yS.replace("'", "");
 
-        _web_page_Current_PROCESSED_button
-            ->SET__yri_button_Y_position_geometry(y);
+        _web_page_Current_PROCESSED_Element
+            ->SET__yri_element_Y_position_geometry(y);
     }
 }
 
 
 void YERITH_WEB_PAGES_GENERATOR_MAIN::
-                PROCESS___yri_html_page___CURRENT___Widget_button__SET_Width(QString widthS)
+                PROCESS___yri_html_page___CURRENT___Widget_Element__SET_Width(QString widthS)
 {
-    if (0 != _web_page_Current_PROCESSED_button)
+    if (0 != _web_page_Current_PROCESSED_Element)
     {
         QString width = widthS.replace("'", "");
 
-        _web_page_Current_PROCESSED_button
-            ->SET__yri_button_WIDTH(width);
+        _web_page_Current_PROCESSED_Element
+            ->SET__yri_element_WIDTH(width);
     }
 }
 
 
 void YERITH_WEB_PAGES_GENERATOR_MAIN::
-                PROCESS___yri_html_page___CURRENT___Widget_button__SET_Height(QString heightS)
+                PROCESS___yri_html_page___CURRENT___Widget_Element__SET_Height(QString heightS)
 {
-    if (0 != _web_page_Current_PROCESSED_button)
+    if (0 != _web_page_Current_PROCESSED_Element)
     {
         QString height = heightS.replace("'", "");
 
-        _web_page_Current_PROCESSED_button
-            ->SET__yri_button_HEIGTH(height);
+        _web_page_Current_PROCESSED_Element
+            ->SET__yri_element_HEIGHT(height);
 
         //QDEBUG_STRING_OUTPUT_1("text debugging !");
 
-//        _web_page_Current_PROCESSED_button->print_debugging();
+//        _web_page_Current_PROCESSED_Element->print_debugging();
     }
 }
 
@@ -693,68 +695,7 @@ void YERITH_WEB_PAGES_GENERATOR_MAIN::
 //                              _web_page_Current_Button___LIST->size());
 
 
-    _web_page_Current_PROCESSED_button = a_button;
-}
-
-
-
-void YERITH_WEB_PAGES_GENERATOR_MAIN::
-                PROCESS___yri_html_page___CURRENT___Widget_labelText__SET_X(QString xS)
-{
-    if (0 != _web_page_Current_PROCESSED_Label_Text)
-    {
-        QString x = xS.replace("'", "");
-
-        _web_page_Current_PROCESSED_Label_Text
-            ->SET__yri_label_text_X_position_geometry(x);
-
-//        _web_page_Current_PROCESSED_Label_Text
-//            ->print_debugging();
-    }
-}
-
-
-void YERITH_WEB_PAGES_GENERATOR_MAIN::
-                PROCESS___yri_html_page___CURRENT___Widget_labelText__SET_Y(QString yS)
-{
-    if (0 != _web_page_Current_PROCESSED_Label_Text)
-    {
-        //QDEBUG_STRING_OUTPUT_2("PROCESS___yri_html_page___CURRENT___Widget_labelText__SET_Y", y);
-        QString y = yS.replace("'", "");
-
-        _web_page_Current_PROCESSED_Label_Text
-            ->SET__yri_label_text_Y_position_geometry(y);
-    }
-}
-
-
-void YERITH_WEB_PAGES_GENERATOR_MAIN::
-                PROCESS___yri_html_page___CURRENT___Widget_labelText__SET_Width(QString widthS)
-{
-    if (0 != _web_page_Current_PROCESSED_Label_Text)
-    {
-        QString width = widthS.replace("'", "");
-
-        _web_page_Current_PROCESSED_Label_Text
-            ->SET__yri_label_text_WIDTH(width);
-    }
-}
-
-
-void YERITH_WEB_PAGES_GENERATOR_MAIN::
-                PROCESS___yri_html_page___CURRENT___Widget_labelText__SET_Height(QString heightS)
-{
-    if (0 != _web_page_Current_PROCESSED_Label_Text)
-    {
-        QString height = heightS.replace("'", "");
-
-        _web_page_Current_PROCESSED_Label_Text
-            ->SET__yri_label_text_HEIGTH(height);
-
-        //QDEBUG_STRING_OUTPUT_1("text debugging !");
-
-//        _web_page_Current_PROCESSED_Label_Text->print_debugging();
-    }
+    _web_page_Current_PROCESSED_Element = a_button;
 }
 
 
@@ -778,7 +719,7 @@ void YERITH_WEB_PAGES_GENERATOR_MAIN::PROCESS_Current__yri_html_page_Widget_Labe
 
     YRITreeHTMLPageLABELText *a_Labeled_Text = new YRITreeHTMLPageLABELText(_current_processed_HTML_Page_DS);
 
-    a_Labeled_Text->SET__label_text(labelText);
+    a_Labeled_Text->SET__element_text(labelText);
 
 
     _web_page_Current_Label_Text___LIST->append(a_Labeled_Text);
@@ -788,7 +729,7 @@ void YERITH_WEB_PAGES_GENERATOR_MAIN::PROCESS_Current__yri_html_page_Widget_Labe
 //                              _web_page_Current_Label_Text___LIST->size());
 
 
-    _web_page_Current_PROCESSED_Label_Text = a_Labeled_Text;
+    _web_page_Current_PROCESSED_Element = a_Labeled_Text;
 }
 
 

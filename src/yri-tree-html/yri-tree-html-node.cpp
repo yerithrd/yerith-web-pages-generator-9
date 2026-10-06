@@ -8,6 +8,7 @@
 
 #include "yri-tree-html-node.hpp"
 
+#include "yri-tree-html-PAGE.hpp"
 
 
 uint YRITreeHTMLNode::_HTML_NODES_ID_generator_counter                    = 0;

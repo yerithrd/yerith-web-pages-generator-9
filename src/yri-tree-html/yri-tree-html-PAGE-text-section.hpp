@@ -11,24 +11,29 @@
  */
 
 
+#include "yri-tree-html-PAGE-ELEMENT.hpp"
+
 #include "yri-tree-html-node.hpp"
 
 #include <QtCore/QString>
 
 
-class YRITreeHTMLPageTextSECTION : public YRITreeHTMLNode
+class YRITreeHTMLPageELEMENT;
+
+
+class YRITreeHTMLPageTextSECTION : public YRITreeHTMLPageELEMENT
 {
 public:
 
 
     inline YRITreeHTMLPageTextSECTION(YRITreeHTMLPage *a_containing_HTML_Page)
-    :YRITreeHTMLNode()
+    :YRITreeHTMLPageELEMENT()
     {
         SET_containing_HTML_Page(a_containing_HTML_Page);
     }
 
     inline YRITreeHTMLPageTextSECTION()
-    :YRITreeHTMLNode()
+    :YRITreeHTMLPageELEMENT()
     {
     }
 

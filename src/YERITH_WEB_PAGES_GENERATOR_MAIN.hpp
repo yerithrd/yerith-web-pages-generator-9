@@ -8,13 +8,13 @@
  * 		YERITH_WEB_PAGES_GENERATOR_MAIN.hpp
  */
 
-//#include "yri-tree-html/yri-tree-html-PAGE-menu-bar-headers.hpp"
-
 
 #include <QtCore/QPair>
 #include <QtCore/QMap>
 #include <QtCore/QString>
 
+
+class YRITreeHTMLPageELEMENT;
 
 class YRITreeHTMLPageLABELText;
 
@@ -34,8 +34,9 @@ class YERITH_WEB_PAGES_GENERATOR_MAIN
 public:
 
     inline YERITH_WEB_PAGES_GENERATOR_MAIN()
-    :_web_page_Current_PROCESSED_button(0),
+    :_web_page_Current_Label_Text___LIST(0),
      _web_page_Current_Button___LIST(0),
+     _web_page_Current_PROCESSED_Element(0),
      _web_page_menu_bar_Header(0)
     {
     }
@@ -155,33 +156,25 @@ public:
                             (QString htmlPageMenuBarHeaders__POSITION);
 
 
+
+    virtual void PROCESS___yri_html_page___CURRENT___Widget_SET__Element_text(QString button_for_text);
+
+    virtual void PROCESS___yri_html_page___CURRENT___Widget_Element__SET_X(QString xS);
+
+    virtual void PROCESS___yri_html_page___CURRENT___Widget_Element__SET_Y(QString yS);
+
+    virtual void PROCESS___yri_html_page___CURRENT___Widget_Element__SET_Width(QString widthS);
+
+    virtual void PROCESS___yri_html_page___CURRENT___Widget_Element__SET_Height(QString heightS);
+
+
     // Processing button
-    virtual void PROCESS___yri_html_page___CURRENT___Widget_SET__button_text(QString button_for_text);
-
-    virtual void PROCESS___yri_html_page___CURRENT___Widget_button__SET_X(QString xS);
-
-    virtual void PROCESS___yri_html_page___CURRENT___Widget_button__SET_Y(QString yS);
-
-    virtual void PROCESS___yri_html_page___CURRENT___Widget_button__SET_Width(QString widthS);
-
-    virtual void PROCESS___yri_html_page___CURRENT___Widget_button__SET_Height(QString heightS);
-
-
     virtual void
         PROCESS_Current__yri_html_page_Widget_button();
 
 
 
     // Processing label text
-    virtual void PROCESS___yri_html_page___CURRENT___Widget_labelText__SET_X(QString xS);
-
-    virtual void PROCESS___yri_html_page___CURRENT___Widget_labelText__SET_Y(QString yS);
-
-    virtual void PROCESS___yri_html_page___CURRENT___Widget_labelText__SET_Width(QString widthS);
-
-    virtual void PROCESS___yri_html_page___CURRENT___Widget_labelText__SET_Height(QString heightS);
-
-
     virtual void PROCESS_Current__yri_html_page_Widget_Label_text(QString labelText);
 
 
@@ -304,16 +297,14 @@ private:
 
 
 
-    YRITreeHTMLPageLABELText        *_web_page_Current_PROCESSED_Label_Text;
+    QList<YRITreeHTMLPageLABELText *>   *_web_page_Current_Label_Text___LIST;
 
-    QList<YRITreeHTMLPageLABELText *> *_web_page_Current_Label_Text___LIST;
+    QList<YRITreeHTMLPageBUTTON *>      *_web_page_Current_Button___LIST;
 
 
-    YRITreeHTMLPageBUTTON           *_web_page_Current_PROCESSED_button;
+    YRITreeHTMLPageELEMENT              *_web_page_Current_PROCESSED_Element;
 
-    QList<YRITreeHTMLPageBUTTON *>  *_web_page_Current_Button___LIST;
-
-    YRITreeHTMLPageMenuBarHeaders   *_web_page_menu_bar_Header;
+    YRITreeHTMLPageMenuBarHeaders       *_web_page_menu_bar_Header;
 
     /*
      * Each HTML node (element) points to its

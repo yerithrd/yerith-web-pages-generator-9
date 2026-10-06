@@ -19,6 +19,8 @@
 
 
 
+class YRITreeHTMLPage;
+
 class YERITH_WEB_PAGES_GENERATOR_MAIN;
 
 

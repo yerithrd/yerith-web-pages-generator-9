@@ -158,13 +158,13 @@ yri_html_web_html_page_BODY_spec
 				RIGHT_BRACE_TOK SEMI_COLON_TOK
 		| YRI_HTML_PAGE_WIDGET_BUTTON_TOK																				{ a_web_page_generator_main_page->PROCESS_Current__yri_html_page_Widget_button(); } 
 				LEFT_PARENTHESIS_TOK 
-					STRING_TOK 																												{a_web_page_generator_main_page->PROCESS___yri_html_page___CURRENT___Widget_SET__button_text($4->c_str()); }
+					STRING_TOK 																												{a_web_page_generator_main_page->PROCESS___yri_html_page___CURRENT___Widget_SET__Element_text($4->c_str()); }
 				RIGHT_PARENTHESIS_TOK 
 					LEFT_BRACE_TOK  
-						STRING_TOK SEMI_COLON_TOK	STRING_TOK SEMI_COLON_TOK STRING_TOK	{ a_web_page_generator_main_page->PROCESS___yri_html_page___CURRENT___Widget_button__SET_X($8->c_str()); 
-																																							a_web_page_generator_main_page->PROCESS___yri_html_page___CURRENT___Widget_button__SET_Y($10->c_str()); 
-																																							a_web_page_generator_main_page->PROCESS___yri_html_page___CURRENT___Widget_button__SET_Width($12->c_str()); }
-							SEMI_COLON_TOK STRING_TOK																			{ a_web_page_generator_main_page->PROCESS___yri_html_page___CURRENT___Widget_button__SET_Height($15->c_str()); }
+						STRING_TOK SEMI_COLON_TOK	STRING_TOK SEMI_COLON_TOK STRING_TOK	{ a_web_page_generator_main_page->PROCESS___yri_html_page___CURRENT___Widget_Element__SET_X($8->c_str()); 
+																																							a_web_page_generator_main_page->PROCESS___yri_html_page___CURRENT___Widget_Element__SET_Y($10->c_str()); 
+																																							a_web_page_generator_main_page->PROCESS___yri_html_page___CURRENT___Widget_Element__SET_Width($12->c_str()); }
+							SEMI_COLON_TOK STRING_TOK																			{ a_web_page_generator_main_page->PROCESS___yri_html_page___CURRENT___Widget_Element__SET_Height($15->c_str()); }
 					RIGHT_BRACE_TOK																										{  } 
 						SEMI_COLON_TOK yri_html_web_html_page_BODY_spec									
 		| YRI_HTML_PAGE_WIDGET_LABEL_TEXT_TOK																						{ yri_printf($1->c_str(), "yri_html_page_Widget_label_text"); } 
@@ -172,10 +172,10 @@ yri_html_web_html_page_BODY_spec
 					STRING_TOK 																																{ a_web_page_generator_main_page->PROCESS_Current__yri_html_page_Widget_Label_text($4->c_str()); }
 				RIGHT_PARENTHESIS_TOK 
 					LEFT_BRACE_TOK  
-						STRING_TOK SEMI_COLON_TOK	STRING_TOK SEMI_COLON_TOK STRING_TOK					{ a_web_page_generator_main_page->PROCESS___yri_html_page___CURRENT___Widget_labelText__SET_X($8->c_str());
-																																											a_web_page_generator_main_page->PROCESS___yri_html_page___CURRENT___Widget_labelText__SET_Y($10->c_str());
-																																											a_web_page_generator_main_page->PROCESS___yri_html_page___CURRENT___Widget_labelText__SET_Width($12->c_str()); }
-							SEMI_COLON_TOK STRING_TOK																							{ a_web_page_generator_main_page->PROCESS___yri_html_page___CURRENT___Widget_labelText__SET_Height($15->c_str()); }
+						STRING_TOK SEMI_COLON_TOK	STRING_TOK SEMI_COLON_TOK STRING_TOK					{ a_web_page_generator_main_page->PROCESS___yri_html_page___CURRENT___Widget_Element__SET_X($8->c_str());
+																																											a_web_page_generator_main_page->PROCESS___yri_html_page___CURRENT___Widget_Element__SET_Y($10->c_str());
+																																											a_web_page_generator_main_page->PROCESS___yri_html_page___CURRENT___Widget_Element__SET_Width($12->c_str()); }
+							SEMI_COLON_TOK STRING_TOK																							{ a_web_page_generator_main_page->PROCESS___yri_html_page___CURRENT___Widget_Element__SET_Height($15->c_str()); }
 					RIGHT_BRACE_TOK																														{ } 
 						SEMI_COLON_TOK yri_html_web_html_page_BODY_spec
 		;

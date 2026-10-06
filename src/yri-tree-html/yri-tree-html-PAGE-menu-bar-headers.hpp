@@ -13,10 +13,14 @@
 
 #include "yri-tree-html-node.hpp"
 
+#include "yri-tree-html-PAGE-ELEMENT.hpp"
+
 #include <QtCore/QMap>
 
 #include <QtCore/QString>
 
+
+class YRITreeHTMLPageELEMENT;
 
 
 enum WEBbHtmlElementPosition
@@ -28,19 +32,19 @@ enum WEBbHtmlElementPosition
 };
 
 
-class YRITreeHTMLPageMenuBarHeaders : public YRITreeHTMLNode
+class YRITreeHTMLPageMenuBarHeaders : public YRITreeHTMLPageELEMENT
 {
 public:
 
     inline YRITreeHTMLPageMenuBarHeaders(QString a_web_html_element_positionVALUE)
-    :YRITreeHTMLNode(),
+    :YRITreeHTMLPageELEMENT(),
      _menu_bar_position_web_page(horizontal_top)
     {
         initializations(a_web_html_element_positionVALUE);
     }
 
     inline YRITreeHTMLPageMenuBarHeaders()
-    :YRITreeHTMLNode(),
+    :YRITreeHTMLPageELEMENT(),
      _menu_bar_position_web_page(horizontal_top)
     {
         initializations();

@@ -58,6 +58,10 @@ ${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE.o:		${SRC}/yri-tree-html/yri-tree-ht
 		mkdir -p ${OBJ_DIR}/yri-tree-html
 		$(CC) $(CFLAGS) -c ${SRC}/yri-tree-html/yri-tree-html-PAGE.cpp 	-o ${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE.o
 
+${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE-ELEMENT.o:		${SRC}/yri-tree-html/yri-tree-html-PAGE-ELEMENT.cpp
+		mkdir -p ${OBJ_DIR}/yri-tree-html
+		$(CC) $(CFLAGS) -c ${SRC}/yri-tree-html/yri-tree-html-PAGE-ELEMENT.cpp 	-o ${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE-ELEMENT.o
+
 ${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE-label-text.o:		${SRC}/yri-tree-html/yri-tree-html-PAGE-label-text.cpp
 		mkdir -p ${OBJ_DIR}/yri-tree-html
 		$(CC) $(CFLAGS) -c ${SRC}/yri-tree-html/yri-tree-html-PAGE-label-text.cpp 	-o ${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE-label-text.o
