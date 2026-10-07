@@ -633,7 +633,7 @@ void YERITH_WEB_PAGES_GENERATOR_MAIN::
         _web_page_Current_PROCESSED_Element
             ->SET__yri_element_X_position_geometry(x);
 
-        QDEBUG_STRING_OUTPUT_2_N("x", _web_page_Current_PROCESSED_Element->Get__yri_element_X_position_geometry_integer_value());
+//        QDEBUG_STRING_OUTPUT_2_N("x", _web_page_Current_PROCESSED_Element->Get__yri_element_X_position_geometry_integer_value());
 
 //        _web_page_Current_PROCESSED_Element
 //            ->print_debugging();
@@ -652,7 +652,7 @@ void YERITH_WEB_PAGES_GENERATOR_MAIN::
         _web_page_Current_PROCESSED_Element
             ->SET__yri_element_Y_position_geometry(y);
 
-        QDEBUG_STRING_OUTPUT_2_N("y", _web_page_Current_PROCESSED_Element->Get__yri_element_Y_position_geometry_integer_value());
+//        QDEBUG_STRING_OUTPUT_2_N("y", _web_page_Current_PROCESSED_Element->Get__yri_element_Y_position_geometry_integer_value());
     }
 }
 

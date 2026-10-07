@@ -57,6 +57,10 @@ QString YRITreeHTMLPageComboBox::generate_html_text_description()
                         .arg(Get__element_name(),
                              QString::number(Get_element_ID()));
 
+    result.append(QString("<option value=\"%1\">%2</option>")
+                    .arg(Get__element_text().toLower(),
+                         Get__element_text()));
+
     result.append("\n</select>\n");
 
 //    QDEBUG_STRING_OUTPUT_2("YRITreeHTMLPageComboBox::generate_html_text_description()",
@@ -83,8 +87,7 @@ QString YRITreeHTMLPageComboBox::generate_CSS_File_Content_STRING()
 
     content.append("position: absolute;\n")
            .append(QString("top: %1px; /*Y coordinate*/\n").arg(QString::number(y_position)))
-           .append(QString("left: %1px; /*X coordinate*/\n").arg(QString::number(x_position)))
-           .append(QString("width: %1px; /*width value*/\n").arg(width_value));
+           .append(QString("left: %1px; /*X coordinate*/\n").arg(QString::number(x_position)));
 
     content.append("}\n\n");
 
