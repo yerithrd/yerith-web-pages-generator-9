@@ -13,7 +13,7 @@ yerith-web-pages-generator-MAIN YERITHERPPGIPlatinum
 		
 		yri_html_page_Widget_combo_box ('departement'; 'nom de departement') 		{ '307'; '70'; '103'; '200' };		
 		
-		yri_html_page_Widget_check_box ('check_box_tva'; 'Ajouter TVA') 				{ '193'; '491'; '103'; '200' };		
+		yri_html_page_Widget_check_box ('check_box_tva'; 'Ajouter TVA') 				{ '193'; '430'; '103'; '200' };		
 	
 		yri_html_page_Widget_button ('RH \n Fournisseurs') 											{ '193'; '122'; '103'; '89' };
 		yri_html_page_Widget_button ('CRM \n Clients') 		 											{ '193'; '215'; '103'; '89' };
