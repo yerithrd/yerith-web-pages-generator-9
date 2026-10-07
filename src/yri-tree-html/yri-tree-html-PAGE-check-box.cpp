@@ -111,7 +111,7 @@ QString YRITreeHTMLPageCheckBox::generate_CSS_File_Content_STRING()
            .append(QString("top: %1px; /*Y coordinate*/\n").arg(QString::number(y_label_position)))
            .append(QString("left: %1px; /*X coordinate*/\n").arg(QString::number(x_label_position)));
 
-    content.append("}\n\n");
+    content.append("}\n");
 
     content.append(QString("#check_box_submit-id%1{\n")
                     .arg(QString::number(Get_element_ID())));
