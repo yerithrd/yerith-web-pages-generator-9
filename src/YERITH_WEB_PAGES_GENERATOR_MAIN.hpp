@@ -18,6 +18,8 @@ class YRITreeHTMLPageELEMENT;
 
 class YRITreeHTMLPageLABELText;
 
+class YRITreeHTMLPageComboBox;
+
 class YRITreeHTMLPageBUTTON;
 
 class YRITreeHTMLPageTextSECTION;
@@ -36,6 +38,7 @@ public:
     inline YERITH_WEB_PAGES_GENERATOR_MAIN()
     :_web_page_Current_Label_Text___LIST(0),
      _web_page_Current_Button___LIST(0),
+     _web_page_Current_Combo_Box___LIST(0),
      _web_page_Current_PROCESSED_Element(0),
      _web_page_menu_bar_Header(0)
     {
@@ -156,8 +159,9 @@ public:
                             (QString htmlPageMenuBarHeaders__POSITION);
 
 
+    virtual void PROCESS___yri_html_page___CURRENT___Widget_SET__Element_name(QString name);
 
-    virtual void PROCESS___yri_html_page___CURRENT___Widget_SET__Element_text(QString button_for_text);
+    virtual void PROCESS___yri_html_page___CURRENT___Widget_SET__Element_text(QString text);
 
     virtual void PROCESS___yri_html_page___CURRENT___Widget_Element__SET_X(QString xS);
 
@@ -168,10 +172,14 @@ public:
     virtual void PROCESS___yri_html_page___CURRENT___Widget_Element__SET_Height(QString heightS);
 
 
+    // Processing combo-box
+    virtual void
+        PROCESS_Current__yri_html_page_Widget_combo_box();
+
+
     // Processing button
     virtual void
         PROCESS_Current__yri_html_page_Widget_button();
-
 
 
     // Processing label text
@@ -227,10 +235,14 @@ public:
         return _web_page_Current_Label_Text___LIST;
     }
 
-
     virtual inline QList<YRITreeHTMLPageBUTTON *> *Get___web_page_Current_Button___LIST()
     {
         return _web_page_Current_Button___LIST;
+    }
+
+    virtual inline QList<YRITreeHTMLPageComboBox *> *Get___web_page_Current_Combo_Box___LIST()
+    {
+        return  _web_page_Current_Combo_Box___LIST;
     }
 
 
@@ -300,6 +312,8 @@ private:
     QList<YRITreeHTMLPageLABELText *>   *_web_page_Current_Label_Text___LIST;
 
     QList<YRITreeHTMLPageBUTTON *>      *_web_page_Current_Button___LIST;
+
+    QList<YRITreeHTMLPageComboBox *>    *_web_page_Current_Combo_Box___LIST;
 
 
     YRITreeHTMLPageELEMENT              *_web_page_Current_PROCESSED_Element;

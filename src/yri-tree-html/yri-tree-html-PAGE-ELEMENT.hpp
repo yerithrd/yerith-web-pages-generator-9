@@ -54,6 +54,17 @@ public:
     }
 
 
+    virtual inline void SET__element_name(QString name_for_element)
+    {
+        _element___Name = name_for_element;
+    }
+
+    virtual inline QString Get__element_name()
+    {
+        return _element___Name;
+    }
+
+
     virtual inline void SET__yri_font_size(QString A_yri_font_size)
     {
         _yri_font_size = A_yri_font_size;
@@ -112,12 +123,12 @@ public:
 
     virtual inline void SET__yri_element_HEIGHT(QString A_yri_element_HEIGHT)
     {
-        _yri_element_HEIGTH = A_yri_element_HEIGHT;
+        _yri_element_HEIGHT = A_yri_element_HEIGHT;
     }
 
     virtual inline QString Get__yri_element_HEIGHT()
     {
-        return _yri_element_HEIGTH;
+        return _yri_element_HEIGHT;
     }
 
 
@@ -143,6 +154,8 @@ protected:
 
     QString         _element___Text;
 
+    QString         _element___Name;
+
 
     QString         _yri_font_size;
 
@@ -152,7 +165,7 @@ protected:
 
     QString         _yri_element_WIDTH;
 
-    QString         _yri_element_HEIGTH;
+    QString         _yri_element_HEIGHT;
 };
 
 

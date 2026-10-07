@@ -13,6 +13,8 @@
 
 #include "yri-tree-html-PAGE-button.hpp"
 
+#include "yri-tree-html-PAGE-combo-box.hpp"
+
 #include "yri-tree-html-PAGE-text-section.hpp"
 
 #include "yri-tree-html-PAGE-menu-bar-headers.hpp"
@@ -77,6 +79,9 @@ QString YRITreeHTMLPage::generate_html_text_description()
 }
 
 
+/**
+ * Generation of HTML web page content.
+ */
 QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
 {
     QString php_page_header_menu_content_STRING;
@@ -89,6 +94,8 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
 
     QList<YRITreeHTMLPageBUTTON *> *a_web_page_Current_Button___LIST = 0;
 
+    QList<YRITreeHTMLPageComboBox *> *a_web_page_Current_ComboBox__LIST = 0;
+
 
     if (0 != _main_generator_pointer)
     {
@@ -97,6 +104,9 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
 
         a_web_page_Current_Button___LIST =
                     _main_generator_pointer->Get___web_page_Current_Button___LIST();
+
+        a_web_page_Current_ComboBox__LIST =
+                    _main_generator_pointer->Get___web_page_Current_Combo_Box___LIST();
     }
 
 
@@ -163,6 +173,32 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
             }
         }
     }
+
+
+    YRITreeHTMLPageComboBox *a_combo_box = 0;
+
+    if (0 != a_web_page_Current_Button___LIST)
+    {
+        for (uint i = 0; i < a_web_page_Current_ComboBox__LIST->size(); ++i)
+        {
+            a_combo_box = a_web_page_Current_ComboBox__LIST->at(i);
+
+            if (0 != a_combo_box)
+            {
+                dbgQString = a_combo_box->generate_html_text_description();
+
+                html_page_body_content_STRING
+                    .append(dbgQString);
+
+                //QDEBUG_STRING_OUTPUT_2("dbgQString-1", dbgQString);
+
+                dbgQString = a_combo_box->generate_CSS_File_Content_STRING();
+
+                //QDEBUG_STRING_OUTPUT_2("dbgQString-2", dbgQString);
+            }
+        }
+    }
+
 
 
     while (it.hasNext())

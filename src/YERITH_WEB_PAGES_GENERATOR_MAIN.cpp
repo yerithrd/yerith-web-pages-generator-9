@@ -18,6 +18,8 @@
 
 #include "yri-tree-html/yri-tree-html-PAGE-ELEMENT.hpp"
 
+#include "yri-tree-html/yri-tree-html-PAGE-combo-box.hpp"
+
 #include "yri-tree-html/yri-tree-html-PAGE-label-text.hpp"
 
 #include "yri-tree-html/yri-tree-html-PAGE-button.hpp"
@@ -594,14 +596,29 @@ void YERITH_WEB_PAGES_GENERATOR_MAIN::
 
 
 void YERITH_WEB_PAGES_GENERATOR_MAIN::
-                PROCESS___yri_html_page___CURRENT___Widget_SET__Element_text(QString button_for_text)
+                PROCESS___yri_html_page___CURRENT___Widget_SET__Element_name(QString name)
 {
     if (0 != _web_page_Current_PROCESSED_Element)
     {
-        button_for_text.replace("\\n", "<br/>");
+        name.replace("\\n", "<br/>");
+
+        QDEBUG_STRING_OUTPUT_2("name", name);
 
         _web_page_Current_PROCESSED_Element
-            ->SET__element_text(button_for_text);
+            ->SET__element_name(name);
+    }
+}
+
+
+void YERITH_WEB_PAGES_GENERATOR_MAIN::
+                PROCESS___yri_html_page___CURRENT___Widget_SET__Element_text(QString text)
+{
+    if (0 != _web_page_Current_PROCESSED_Element)
+    {
+        text.replace("\\n", "<br/>");
+
+        _web_page_Current_PROCESSED_Element
+            ->SET__element_text(text);
     }
 }
 
@@ -615,6 +632,8 @@ void YERITH_WEB_PAGES_GENERATOR_MAIN::
 
         _web_page_Current_PROCESSED_Element
             ->SET__yri_element_X_position_geometry(x);
+
+        QDEBUG_STRING_OUTPUT_2_N("x", _web_page_Current_PROCESSED_Element->Get__yri_element_X_position_geometry_integer_value());
 
 //        _web_page_Current_PROCESSED_Element
 //            ->print_debugging();
@@ -632,6 +651,8 @@ void YERITH_WEB_PAGES_GENERATOR_MAIN::
 
         _web_page_Current_PROCESSED_Element
             ->SET__yri_element_Y_position_geometry(y);
+
+        QDEBUG_STRING_OUTPUT_2_N("y", _web_page_Current_PROCESSED_Element->Get__yri_element_Y_position_geometry_integer_value());
     }
 }
 
@@ -663,6 +684,39 @@ void YERITH_WEB_PAGES_GENERATOR_MAIN::
 
 //        _web_page_Current_PROCESSED_Element->print_debugging();
     }
+}
+
+
+void YERITH_WEB_PAGES_GENERATOR_MAIN::
+        PROCESS_Current__yri_html_page_Widget_combo_box()
+{
+    if (0 == _web_page_Current_Combo_Box___LIST)
+    {
+        _web_page_Current_Combo_Box___LIST = new QList<YRITreeHTMLPageComboBox *>();
+    }
+
+
+    if (! YRI_CPP_UTILS::isEqualsCaseInsensitive(_current_processed_HTML_Page___CSS_file_name, _current_processed_HTML_Page))
+    {
+        _current_processed_HTML_Page___CSS_file_name = _current_processed_HTML_Page;
+    }
+
+
+    YRITreeHTMLPage *_current_processed_HTML_Page_DS =
+        _webhtmlpageFileNAME__To__web_html_pageDATASTRUCTURE.value(_current_processed_HTML_Page);
+
+
+    YRITreeHTMLPageComboBox *a_combo_box = new YRITreeHTMLPageComboBox(_current_processed_HTML_Page_DS);
+
+
+    _web_page_Current_Combo_Box___LIST->append(a_combo_box);
+
+
+//    QDEBUG_STRING_OUTPUT_2_N("PROCESS_Current__yri_html_page_Widget_button | size",
+//                              _web_page_Current_Button___LIST->size());
+
+
+    _web_page_Current_PROCESSED_Element = a_combo_box;
 }
 
 
@@ -787,12 +841,16 @@ QString YERITH_WEB_PAGES_GENERATOR_MAIN::
 }
 
 
+/**
+ * Generation of CSS web page content.
+ */
 QString YERITH_WEB_PAGES_GENERATOR_MAIN::generate_buttons_CSS___Content(QString directory_folder)
 {
     QString header_Content_CSS___File;
 
     header_Content_CSS___File.append(YRITreeHTMLPageLABELText::Get___header_Content_CSS_File());
     header_Content_CSS___File.append(YRITreeHTMLPageBUTTON::Get___header_Content_CSS_File());
+    header_Content_CSS___File.append(YRITreeHTMLPageComboBox::Get___header_Content_CSS_File());
 
 //    qDebug() << "header_Content_CSS___File: "
 //             <<  header_Content_CSS___File;

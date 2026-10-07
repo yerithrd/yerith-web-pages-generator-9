@@ -84,14 +84,9 @@ QString YRITreeHTMLPageBUTTON::generate_html_text_description()
 
 QString YRITreeHTMLPageBUTTON::generate_CSS_File_Content_STRING()
 {
-    int yri_button_X_position_geometry_integer_value = Get__yri_element_X_position_geometry_integer_value();
+    int x_position = Get__yri_element_X_position_geometry_integer_value();
 
-    int yri_button_Y_position_geometry_integer_value = Get__yri_element_Y_position_geometry_integer_value();
-
-
-    int x_position = 0 + yri_button_X_position_geometry_integer_value;
-
-    int y_position = 0 + yri_button_Y_position_geometry_integer_value;
+    int y_position = Get__yri_element_Y_position_geometry_integer_value();
 
 
     QString content;
@@ -124,7 +119,7 @@ QString YRITreeHTMLPageBUTTON::print_debugging()
                 .arg(_yri_element_X_position_geometry,
                      _yri_element_Y_position_geometry,
                      _yri_element_WIDTH,
-                     _yri_element_HEIGTH);
+                     _yri_element_HEIGHT);
 
     QDEBUG_STRING_OUTPUT_2("debugging_Text",
                             debugging_Text);

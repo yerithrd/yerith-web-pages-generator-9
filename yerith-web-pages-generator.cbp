@@ -23,8 +23,12 @@
 		<Unit filename="src/YERITH_WEB_PAGES_GENERATOR_MAIN.hpp" />
 		<Unit filename="src/utils/YRI_CPP_UTILS.cpp" />
 		<Unit filename="src/utils/YRI_CPP_UTILS.hpp" />
+		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-ELEMENT.cpp" />
+		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-ELEMENT.hpp" />
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-button.cpp" />
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-button.hpp" />
+		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-combo-box.cpp" />
+		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-combo-box.hpp" />
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-label-text.cpp" />
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-label-text.hpp" />
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-menu-bar-headers.cpp" />

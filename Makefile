@@ -9,6 +9,7 @@ OBJS	= bison.o lex.o yri_main.o \
 				${OBJ_DIR}/yri-tree-html/yri-tree-html-node.o \
 				${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE.o \
 				${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE-label-text.o \
+				${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE-combo-box.o \
 				${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE-button.o \
 				${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE-text-section.o \
 				${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE-menu-bar-headers.o \
@@ -69,6 +70,10 @@ ${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE-label-text.o:		${SRC}/yri-tree-html/
 ${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE-button.o:		${SRC}/yri-tree-html/yri-tree-html-PAGE-button.cpp
 		mkdir -p ${OBJ_DIR}/yri-tree-html
 		$(CC) $(CFLAGS) -c ${SRC}/yri-tree-html/yri-tree-html-PAGE-button.cpp 	-o ${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE-button.o
+
+${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE-combo-box.o:		${SRC}/yri-tree-html/yri-tree-html-PAGE-combo-box.cpp
+		mkdir -p ${OBJ_DIR}/yri-tree-html
+		$(CC) $(CFLAGS) -c ${SRC}/yri-tree-html/yri-tree-html-PAGE-combo-box.cpp 	-o ${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE-combo-box.o
 
 ${OBJ_DIR}/yri-tree-html/yri-tree-html-PAGE-text-section.o:		${SRC}/yri-tree-html/yri-tree-html-PAGE-text-section.cpp
 		mkdir -p ${OBJ_DIR}/yri-tree-html
