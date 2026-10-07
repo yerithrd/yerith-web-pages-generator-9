@@ -13,6 +13,8 @@
 
 #include "yri-tree-html-PAGE-button.hpp"
 
+#include "yri-tree-html-PAGE-input-text.hpp"
+
 #include "yri-tree-html-PAGE-check-box.hpp"
 
 #include "yri-tree-html-PAGE-combo-box.hpp"
@@ -96,11 +98,16 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
 
     QList<YRITreeHTMLPageBUTTON *> *a_web_page_Current_Button___LIST = 0;
 
+    QList<YRITreeHTMLPageInputText *> *a_web_page_Current_InputText___LIST = 0;
+
     QList<YRITreeHTMLPageCheckBox *> *a_web_page_Current_CheckBox___LIST = 0;
 
     QList<YRITreeHTMLPageComboBox *> *a_web_page_Current_ComboBox__LIST = 0;
 
 
+    /**
+     * !!! Modify for each new type added !!!
+     */
     if (0 != _main_generator_pointer)
     {
         a_web_page_Current_LabelText___LIST =
@@ -108,6 +115,9 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
 
         a_web_page_Current_Button___LIST =
                     _main_generator_pointer->Get___web_page_Current_Button___LIST();
+
+        a_web_page_Current_InputText___LIST =
+                    _main_generator_pointer->Get___web_page_Current_Input_Text___LIST();
 
         a_web_page_Current_CheckBox___LIST =
                     _main_generator_pointer->Get___web_page_Current_Check_Box___LIST();
@@ -173,6 +183,30 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
                     .append(dbgQString);
 
                 dbgQString = a_button->generate_CSS_File_Content_STRING();
+            }
+        }
+    }
+
+
+    YRITreeHTMLPageInputText *an_input_text = 0;
+    QDEBUG_STRING_OUTPUT_1("an_input_text = 0");
+    if (0 != a_web_page_Current_InputText___LIST)
+    {
+        QDEBUG_STRING_OUTPUT_1("0 != a_web_page_Current_InputText___LIST");
+        for (uint i = 0; i < a_web_page_Current_InputText___LIST->size(); ++i)
+        {
+            an_input_text = a_web_page_Current_InputText___LIST->at(i);
+
+            if (0 != an_input_text)
+            {
+                dbgQString = an_input_text->generate_html_text_description();
+
+                QDEBUG_STRING_OUTPUT_2("dbgQString-1", dbgQString);
+
+                html_page_body_content_STRING
+                    .append(dbgQString);
+
+                dbgQString = an_input_text->generate_CSS_File_Content_STRING();
             }
         }
     }

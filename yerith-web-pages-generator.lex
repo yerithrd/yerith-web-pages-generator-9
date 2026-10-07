@@ -33,6 +33,7 @@ yri_html_page_menu_bar_link_string			"yri_html_page_MENU_BAR_link_string"
 yri_html_page_section										"yri_html_page_section"
 yri_html_page_text_SECTION 							"yri_html_page_text_SECTION"
 yri_html_page_Widget_label_text					"yri_html_page_Widget_label_text"
+yri_html_page_Widget_input_text					"yri_html_page_Widget_input_text"
 yri_html_page_Widget_check_box					"yri_html_page_Widget_check_box"
 yri_html_page_Widget_combo_box					"yri_html_page_Widget_combo_box"
 yri_html_page_Widget_button							"yri_html_page_Widget_button"
@@ -79,6 +80,7 @@ r_brace																"}"
 {yri_html_page_section}											{ yylval.opt_val = new std::string(yytext); return YRI_HTML_PAGE_SECTION_TOK; }
 {yri_html_page_text_SECTION}								{ yylval.opt_val = new std::string(yytext); return YRI_HTML_PAGE_TEXT_SECTION_TOK; }
 {yri_html_page_Widget_label_text}						{ yylval.opt_val = new std::string(yytext); return YRI_HTML_PAGE_WIDGET_LABEL_TEXT_TOK; }
+{yri_html_page_Widget_input_text}						{ yylval.opt_val = new std::string(yytext); return YRI_HTML_PAGE_WIDGET_INPUT_TEXT_TOK; }
 {yri_html_page_Widget_check_box}						{ yylval.opt_val = new std::string(yytext); return YRI_HTML_PAGE_WIDGET_CHECK_BOX_TOK; }
 {yri_html_page_Widget_combo_box}						{ yylval.opt_val = new std::string(yytext); return YRI_HTML_PAGE_WIDGET_COMBO_BOX_TOK; }
 {yri_html_page_Widget_button}								{ yylval.opt_val = new std::string(yytext); return YRI_HTML_PAGE_WIDGET_BUTTON_TOK; }

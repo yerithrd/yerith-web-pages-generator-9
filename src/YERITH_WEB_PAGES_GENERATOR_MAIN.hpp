@@ -18,6 +18,8 @@ class YRITreeHTMLPageELEMENT;
 
 class YRITreeHTMLPageLABELText;
 
+class YRITreeHTMLPageInputText;
+
 class YRITreeHTMLPageCheckBox;
 
 class YRITreeHTMLPageComboBox;
@@ -175,7 +177,13 @@ public:
     virtual void PROCESS___yri_html_page___CURRENT___Widget_Element__SET_Height(QString heightS);
 
 
-    // Processing checkbox
+
+    // Processing input text (HTML 'input' text)
+    virtual void
+        PROCESS_Current__yri_html_page_Widget_input_text();
+
+
+    // Processing checkbox (HTML 'input' checkbox)
     virtual void
         PROCESS_Current__yri_html_page_Widget_check_box();
 
@@ -246,6 +254,11 @@ public:
     virtual inline QList<YRITreeHTMLPageBUTTON *> *Get___web_page_Current_Button___LIST()
     {
         return _web_page_Current_Button___LIST;
+    }
+
+    virtual inline QList<YRITreeHTMLPageInputText *> *Get___web_page_Current_Input_Text___LIST()
+    {
+        return this->_web_page_Current_Input_Text___LIST;
     }
 
     virtual inline QList<YRITreeHTMLPageCheckBox *> *Get___web_page_Current_Check_Box___LIST()
@@ -325,6 +338,8 @@ private:
     QList<YRITreeHTMLPageLABELText *>   *_web_page_Current_Label_Text___LIST;
 
     QList<YRITreeHTMLPageBUTTON *>      *_web_page_Current_Button___LIST;
+
+    QList<YRITreeHTMLPageInputText *>    *_web_page_Current_Input_Text___LIST;
 
     QList<YRITreeHTMLPageCheckBox *>    *_web_page_Current_Check_Box___LIST;
 

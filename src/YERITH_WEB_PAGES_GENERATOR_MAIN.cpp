@@ -22,6 +22,8 @@
 
 #include "yri-tree-html/yri-tree-html-PAGE-combo-box.hpp"
 
+#include "yri-tree-html/yri-tree-html-PAGE-input-text.hpp"
+
 #include "yri-tree-html/yri-tree-html-PAGE-label-text.hpp"
 
 #include "yri-tree-html/yri-tree-html-PAGE-button.hpp"
@@ -690,6 +692,39 @@ void YERITH_WEB_PAGES_GENERATOR_MAIN::
 
 
 void YERITH_WEB_PAGES_GENERATOR_MAIN::
+        PROCESS_Current__yri_html_page_Widget_input_text()
+{
+    if (0 == _web_page_Current_Input_Text___LIST)
+    {
+        _web_page_Current_Input_Text___LIST = new QList<YRITreeHTMLPageInputText *>();
+    }
+
+
+    if (! YRI_CPP_UTILS::isEqualsCaseInsensitive(_current_processed_HTML_Page___CSS_file_name, _current_processed_HTML_Page))
+    {
+        _current_processed_HTML_Page___CSS_file_name = _current_processed_HTML_Page;
+    }
+
+
+    YRITreeHTMLPage *_current_processed_HTML_Page_DS =
+        _webhtmlpageFileNAME__To__web_html_pageDATASTRUCTURE.value(_current_processed_HTML_Page);
+
+
+    YRITreeHTMLPageInputText *an_input_text = new YRITreeHTMLPageInputText(_current_processed_HTML_Page_DS);
+
+
+    _web_page_Current_Input_Text___LIST->append(an_input_text);
+
+
+//    QDEBUG_STRING_OUTPUT_2_N("PROCESS_Current__yri_html_page_Widget_input_text | size",
+//                              _web_page_Current_Input_Text___LIST->size());
+
+
+    _web_page_Current_PROCESSED_Element = an_input_text;
+}
+
+
+void YERITH_WEB_PAGES_GENERATOR_MAIN::
         PROCESS_Current__yri_html_page_Widget_check_box()
 {
     if (0 == _web_page_Current_Check_Box___LIST)
@@ -885,6 +920,7 @@ QString YERITH_WEB_PAGES_GENERATOR_MAIN::generate_buttons_CSS___Content(QString 
 
     header_Content_CSS___File.append(YRITreeHTMLPageLABELText::Get___header_Content_CSS_File());
     header_Content_CSS___File.append(YRITreeHTMLPageBUTTON::Get___header_Content_CSS_File());
+    header_Content_CSS___File.append(YRITreeHTMLPageInputText::Get___header_Content_CSS_File());
     header_Content_CSS___File.append(YRITreeHTMLPageCheckBox::Get___header_Content_CSS_File());
     header_Content_CSS___File.append(YRITreeHTMLPageComboBox::Get___header_Content_CSS_File());
 
