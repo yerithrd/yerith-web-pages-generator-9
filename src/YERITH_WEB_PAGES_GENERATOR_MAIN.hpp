@@ -18,6 +18,8 @@ class YRITreeHTMLPageELEMENT;
 
 class YRITreeHTMLPageLABELText;
 
+class YRITreeHTMLPageCheckBox;
+
 class YRITreeHTMLPageComboBox;
 
 class YRITreeHTMLPageBUTTON;
@@ -38,6 +40,7 @@ public:
     inline YERITH_WEB_PAGES_GENERATOR_MAIN()
     :_web_page_Current_Label_Text___LIST(0),
      _web_page_Current_Button___LIST(0),
+     _web_page_Current_Check_Box___LIST(0),
      _web_page_Current_Combo_Box___LIST(0),
      _web_page_Current_PROCESSED_Element(0),
      _web_page_menu_bar_Header(0)
@@ -172,6 +175,11 @@ public:
     virtual void PROCESS___yri_html_page___CURRENT___Widget_Element__SET_Height(QString heightS);
 
 
+    // Processing checkbox
+    virtual void
+        PROCESS_Current__yri_html_page_Widget_check_box();
+
+
     // Processing combo-box
     virtual void
         PROCESS_Current__yri_html_page_Widget_combo_box();
@@ -238,6 +246,11 @@ public:
     virtual inline QList<YRITreeHTMLPageBUTTON *> *Get___web_page_Current_Button___LIST()
     {
         return _web_page_Current_Button___LIST;
+    }
+
+    virtual inline QList<YRITreeHTMLPageCheckBox *> *Get___web_page_Current_Check_Box___LIST()
+    {
+        return  _web_page_Current_Check_Box___LIST;
     }
 
     virtual inline QList<YRITreeHTMLPageComboBox *> *Get___web_page_Current_Combo_Box___LIST()
@@ -312,6 +325,8 @@ private:
     QList<YRITreeHTMLPageLABELText *>   *_web_page_Current_Label_Text___LIST;
 
     QList<YRITreeHTMLPageBUTTON *>      *_web_page_Current_Button___LIST;
+
+    QList<YRITreeHTMLPageCheckBox *>    *_web_page_Current_Check_Box___LIST;
 
     QList<YRITreeHTMLPageComboBox *>    *_web_page_Current_Combo_Box___LIST;
 

@@ -13,6 +13,8 @@
 
 #include "yri-tree-html-PAGE-button.hpp"
 
+#include "yri-tree-html-PAGE-check-box.hpp"
+
 #include "yri-tree-html-PAGE-combo-box.hpp"
 
 #include "yri-tree-html-PAGE-text-section.hpp"
@@ -94,6 +96,8 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
 
     QList<YRITreeHTMLPageBUTTON *> *a_web_page_Current_Button___LIST = 0;
 
+    QList<YRITreeHTMLPageCheckBox *> *a_web_page_Current_CheckBox___LIST = 0;
+
     QList<YRITreeHTMLPageComboBox *> *a_web_page_Current_ComboBox__LIST = 0;
 
 
@@ -104,6 +108,9 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
 
         a_web_page_Current_Button___LIST =
                     _main_generator_pointer->Get___web_page_Current_Button___LIST();
+
+        a_web_page_Current_CheckBox___LIST =
+                    _main_generator_pointer->Get___web_page_Current_Check_Box___LIST();
 
         a_web_page_Current_ComboBox__LIST =
                     _main_generator_pointer->Get___web_page_Current_Combo_Box___LIST();
@@ -165,11 +172,28 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
                 html_page_body_content_STRING
                     .append(dbgQString);
 
-                //QDEBUG_STRING_OUTPUT_2("dbgQString-1", dbgQString);
-
                 dbgQString = a_button->generate_CSS_File_Content_STRING();
+            }
+        }
+    }
 
-                //QDEBUG_STRING_OUTPUT_2("dbgQString-2", dbgQString);
+
+    YRITreeHTMLPageCheckBox *a_check_box = 0;
+
+    if (0 != a_web_page_Current_CheckBox___LIST)
+    {
+        for (uint i = 0; i < a_web_page_Current_CheckBox___LIST->size(); ++i)
+        {
+            a_check_box = a_web_page_Current_CheckBox___LIST->at(i);
+
+            if (0 != a_check_box)
+            {
+                dbgQString = a_check_box->generate_html_text_description();
+
+                html_page_body_content_STRING
+                    .append(dbgQString);
+
+                dbgQString = a_check_box->generate_CSS_File_Content_STRING();
             }
         }
     }
@@ -190,11 +214,7 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
                 html_page_body_content_STRING
                     .append(dbgQString);
 
-                //QDEBUG_STRING_OUTPUT_2("dbgQString-1", dbgQString);
-
                 dbgQString = a_combo_box->generate_CSS_File_Content_STRING();
-
-                //QDEBUG_STRING_OUTPUT_2("dbgQString-2", dbgQString);
             }
         }
     }
