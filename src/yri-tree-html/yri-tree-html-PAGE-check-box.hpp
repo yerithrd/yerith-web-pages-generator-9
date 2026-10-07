@@ -7,7 +7,7 @@
 /**
  * @AUTEUR: Pr. Prof. Dr.-Ing. XAVIER NOUNDOU
  *
- * 		yri-tree-html-PAGE-combo-box.hpp
+ * 		yri-tree-html-PAGE-check-box.hpp
  */
 
 
