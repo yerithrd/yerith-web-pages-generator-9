@@ -27,8 +27,12 @@
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-ELEMENT.hpp" />
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-button.cpp" />
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-button.hpp" />
+		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-check-box.cpp" />
+		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-check-box.hpp" />
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-combo-box.cpp" />
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-combo-box.hpp" />
+		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-input-text.cpp" />
+		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-input-text.hpp" />
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-label-text.cpp" />
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-label-text.hpp" />
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-menu-bar-headers.cpp" />
