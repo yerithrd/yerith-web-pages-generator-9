@@ -189,10 +189,10 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
 
 
     YRITreeHTMLPageInputText *an_input_text = 0;
-    QDEBUG_STRING_OUTPUT_1("an_input_text = 0");
+//    QDEBUG_STRING_OUTPUT_1("an_input_text = 0");
     if (0 != a_web_page_Current_InputText___LIST)
     {
-        QDEBUG_STRING_OUTPUT_1("0 != a_web_page_Current_InputText___LIST");
+//        QDEBUG_STRING_OUTPUT_1("0 != a_web_page_Current_InputText___LIST");
         for (uint i = 0; i < a_web_page_Current_InputText___LIST->size(); ++i)
         {
             an_input_text = a_web_page_Current_InputText___LIST->at(i);
@@ -201,7 +201,7 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
             {
                 dbgQString = an_input_text->generate_html_text_description();
 
-                QDEBUG_STRING_OUTPUT_2("dbgQString-1", dbgQString);
+//                QDEBUG_STRING_OUTPUT_2("dbgQString-1", dbgQString);
 
                 html_page_body_content_STRING
                     .append(dbgQString);
@@ -235,7 +235,7 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
 
     YRITreeHTMLPageComboBox *a_combo_box = 0;
 
-    if (0 != a_web_page_Current_Button___LIST)
+    if (0 != a_web_page_Current_ComboBox__LIST)
     {
         for (uint i = 0; i < a_web_page_Current_ComboBox__LIST->size(); ++i)
         {

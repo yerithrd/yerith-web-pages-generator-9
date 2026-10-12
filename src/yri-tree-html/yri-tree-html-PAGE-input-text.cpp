@@ -69,8 +69,8 @@ QString YRITreeHTMLPageInputText::generate_html_text_description()
 
     result.append("\n");
 
-    QDEBUG_STRING_OUTPUT_2("YRITreeHTMLPageInputText::generate_html_text_description()",
-                            result);
+//    QDEBUG_STRING_OUTPUT_2("YRITreeHTMLPageInputText::generate_html_text_description()",
+//                            result);
 
     return result;
 }
