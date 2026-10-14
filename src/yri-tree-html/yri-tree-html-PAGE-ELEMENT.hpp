@@ -132,6 +132,40 @@ public:
     }
 
 
+    virtual inline void SET__yri_element_YEAR(QString A_yri_element_YEAR)
+    {
+        _yri_element_YEAR = A_yri_element_YEAR;
+    }
+
+    virtual inline QString Get__yri_element_YEAR()
+    {
+        return _yri_element_YEAR;
+    }
+
+
+    virtual inline void SET__yri_element_MONTH(QString A_yri_element_MONTH)
+    {
+        _yri_element_MONTH = A_yri_element_MONTH;
+    }
+
+    virtual inline QString Get__yri_element_MONTH()
+    {
+        return _yri_element_MONTH;
+    }
+
+
+    virtual inline void SET__yri_element_DAY(QString A_yri_element_DAY)
+    {
+        _yri_element_DAY = A_yri_element_DAY;
+    }
+
+    virtual inline QString Get__yri_element_DAY()
+    {
+        return _yri_element_DAY;
+    }
+
+
+
     virtual inline void Set_Element_ID(uint an_id)
     {
         _element_ID = an_id;
@@ -166,6 +200,13 @@ protected:
     QString         _yri_element_WIDTH;
 
     QString         _yri_element_HEIGHT;
+
+
+    QString         _yri_element_YEAR;
+
+    QString         _yri_element_MONTH;
+
+    QString         _yri_element_DAY;
 };
 
 

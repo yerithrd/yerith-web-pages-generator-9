@@ -26,6 +26,8 @@
 
 #include "yri-tree-html/yri-tree-html-PAGE-label-text.hpp"
 
+#include "yri-tree-html/yri-tree-html-PAGE-date-time-edit.hpp"
+
 #include "yri-tree-html/yri-tree-html-PAGE-button.hpp"
 
 #include "yri-tree-html/yri-tree-html-node.hpp"
@@ -692,6 +694,88 @@ void YERITH_WEB_PAGES_GENERATOR_MAIN::
 
 
 void YERITH_WEB_PAGES_GENERATOR_MAIN::
+        PROCESS___yri_html_page___CURRENT___Widget_Element__SET_Year(QString a_year)
+{
+    QDEBUG_STRING_OUTPUT_2("year", a_year);
+
+    if (0 != _web_page_Current_PROCESSED_Element)
+    {
+        QString year = a_year.replace("'", "");
+
+        _web_page_Current_PROCESSED_Element
+            ->SET__yri_element_YEAR(year);
+    }
+}
+
+
+void YERITH_WEB_PAGES_GENERATOR_MAIN::
+        PROCESS___yri_html_page___CURRENT___Widget_Element__SET_Month(QString a_month)
+{
+    QDEBUG_STRING_OUTPUT_2("month", a_month);
+
+    if (0 != _web_page_Current_PROCESSED_Element)
+    {
+        QString month = a_month.replace("'", "");
+
+        _web_page_Current_PROCESSED_Element
+            ->SET__yri_element_MONTH(month);
+    }
+}
+
+
+void YERITH_WEB_PAGES_GENERATOR_MAIN::
+        PROCESS___yri_html_page___CURRENT___Widget_Element__SET_Day(QString a_day)
+{
+    QDEBUG_STRING_OUTPUT_2("day", a_day);
+
+    if (0 != _web_page_Current_PROCESSED_Element)
+    {
+        QString day = a_day.replace("'", "");
+
+        _web_page_Current_PROCESSED_Element
+            ->SET__yri_element_DAY(day);
+
+        //QDEBUG_STRING_OUTPUT_1("text debugging !");
+
+//        _web_page_Current_PROCESSED_Element->print_debugging();
+    }
+}
+
+
+void YERITH_WEB_PAGES_GENERATOR_MAIN::
+        PROCESS_Current__yri_html_page_Widget_date_time_edit()
+{
+    if (0 == _web_page_Current_Datetimeedit___LIST)
+    {
+        _web_page_Current_Datetimeedit___LIST = new QList<YRITreeHTMLPageDatetimeedit *>();
+    }
+
+
+    if (! YRI_CPP_UTILS::isEqualsCaseInsensitive(_current_processed_HTML_Page___CSS_file_name, _current_processed_HTML_Page))
+    {
+        _current_processed_HTML_Page___CSS_file_name = _current_processed_HTML_Page;
+    }
+
+
+    YRITreeHTMLPage *_current_processed_HTML_Page_DS =
+        _webhtmlpageFileNAME__To__web_html_pageDATASTRUCTURE.value(_current_processed_HTML_Page);
+
+
+    YRITreeHTMLPageDatetimeedit *an_input_text = new YRITreeHTMLPageDatetimeedit(_current_processed_HTML_Page_DS);
+
+
+    _web_page_Current_Datetimeedit___LIST->append(an_input_text);
+
+
+//    QDEBUG_STRING_OUTPUT_2_N("_web_page_Current_Datetimeedit___LIST | size",
+//                              _web_page_Current_Datetimeedit___LIST->size());
+
+
+    _web_page_Current_PROCESSED_Element = an_input_text;
+}
+
+
+void YERITH_WEB_PAGES_GENERATOR_MAIN::
         PROCESS_Current__yri_html_page_Widget_input_text()
 {
     if (0 == _web_page_Current_Input_Text___LIST)
@@ -918,6 +1002,7 @@ QString YERITH_WEB_PAGES_GENERATOR_MAIN::generate_buttons_CSS___Content(QString 
 {
     QString header_Content_CSS___File;
 
+    header_Content_CSS___File.append(YRITreeHTMLPageDatetimeedit::Get___header_Content_CSS_File());
     header_Content_CSS___File.append(YRITreeHTMLPageLABELText::Get___header_Content_CSS_File());
     header_Content_CSS___File.append(YRITreeHTMLPageBUTTON::Get___header_Content_CSS_File());
     header_Content_CSS___File.append(YRITreeHTMLPageInputText::Get___header_Content_CSS_File());

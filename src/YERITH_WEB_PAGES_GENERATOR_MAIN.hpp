@@ -16,6 +16,8 @@
 
 class YRITreeHTMLPageELEMENT;
 
+class YRITreeHTMLPageDatetimeedit;
+
 class YRITreeHTMLPageLABELText;
 
 class YRITreeHTMLPageInputText;
@@ -40,7 +42,8 @@ class YERITH_WEB_PAGES_GENERATOR_MAIN
 public:
 
     inline YERITH_WEB_PAGES_GENERATOR_MAIN()
-    :_web_page_Current_Label_Text___LIST(0),
+    :_web_page_Current_Datetimeedit___LIST(0),
+     _web_page_Current_Label_Text___LIST(0),
      _web_page_Current_Button___LIST(0),
      _web_page_Current_Check_Box___LIST(0),
      _web_page_Current_Combo_Box___LIST(0),
@@ -177,6 +180,18 @@ public:
     virtual void PROCESS___yri_html_page___CURRENT___Widget_Element__SET_Height(QString heightS);
 
 
+    virtual void PROCESS___yri_html_page___CURRENT___Widget_Element__SET_Year(QString year);
+
+    virtual void PROCESS___yri_html_page___CURRENT___Widget_Element__SET_Month(QString month);
+
+    virtual void PROCESS___yri_html_page___CURRENT___Widget_Element__SET_Day(QString day);
+
+
+
+    // Processing input text (HTML 'input' text)
+    virtual void
+        PROCESS_Current__yri_html_page_Widget_date_time_edit();
+
 
     // Processing input text (HTML 'input' text)
     virtual void
@@ -245,6 +260,11 @@ public:
         return _header_menu_bar_SPECIFICATION_name_in_file;
     }
 
+
+    virtual inline QList<YRITreeHTMLPageDatetimeedit *> *Get___web_page_Current_Datetimeedit___LIST()
+    {
+        return _web_page_Current_Datetimeedit___LIST;
+    }
 
     virtual inline QList<YRITreeHTMLPageLABELText *> *Get___web_page_Current_LabelText___LIST()
     {
@@ -334,6 +354,8 @@ private:
     QString                         _header_menu_bar_SPECIFICATION_name_in_file;
 
 
+
+    QList<YRITreeHTMLPageDatetimeedit *>   *_web_page_Current_Datetimeedit___LIST;
 
     QList<YRITreeHTMLPageLABELText *>   *_web_page_Current_Label_Text___LIST;
 

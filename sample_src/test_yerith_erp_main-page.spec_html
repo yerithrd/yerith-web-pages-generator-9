@@ -9,6 +9,7 @@ yerith-web-pages-generator-MAIN YERITHERPPGIPlatinum
 		yri_html_page_input_header_menu_bar[web-html-page-menu-bar-headers];
 
 
+		
 		yri_html_page_Widget_label_text ('YERITH-ERP-9.0-platiNum') 						{ '103'; '70'; '200'; '200' };	
 		
 		yri_html_page_Widget_combo_box ('departement'; '') 		{ '307'; '70'; '103'; '200' };		
@@ -17,7 +18,10 @@ yerith-web-pages-generator-MAIN YERITHERPPGIPlatinum
 		
 		yri_html_page_Widget_input_text ('first_name'; '') 						{ '193'; '510'; '103'; '200' };		
 	
-		yri_html_page_Widget_button ('RH \n Fournisseurs') 											{ '193'; '122'; '103'; '89' };
+		yri_html_page_Widget_date_time_edit ('dateEdit_stocks_fin'; ':') 				{ '193'; '590'; '200'; '200' };	
+		
+
+	yri_html_page_Widget_button ('RH \n Fournisseurs') 											{ '193'; '122'; '103'; '89' };
 		yri_html_page_Widget_button ('CRM \n Clients') 		 											{ '193'; '215'; '103'; '89' };
 		yri_html_page_Widget_button ('Paiements') 				 											{ '193'; '308'; '103'; '89' };
 		yri_html_page_Widget_button ('CHARGES \n FINANCIERES \n\n (Emprunts)') 	{ '300'; '122'; '103'; '89' };

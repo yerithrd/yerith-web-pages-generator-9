@@ -31,6 +31,8 @@
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-check-box.hpp" />
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-combo-box.cpp" />
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-combo-box.hpp" />
+		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-date-time-edit.cpp" />
+		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-date-time-edit.hpp" />
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-input-text.cpp" />
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-input-text.hpp" />
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-label-text.cpp" />
