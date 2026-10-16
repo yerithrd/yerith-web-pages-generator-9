@@ -59,7 +59,7 @@ QString YRITreeHTMLPageDatetimeedit::generate_html_text_description()
                              QString::number(Get_element_ID()),
                              Get__element_text()));
 
-    result.append(QString("<input type=\"date\" id=\"date-time-id%1\" name=\"date-time-id%1\"> \n")
+    result.append(QString("<input type=\"date\" id=\"date-time-id%1\" name=\"date-time-id%2\"> \n")
                         .arg(QString::number(Get_element_ID()),
                              QString::number(Get_element_ID())));
 
