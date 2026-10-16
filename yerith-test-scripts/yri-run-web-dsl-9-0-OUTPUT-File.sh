@@ -65,13 +65,13 @@ if [ -x < ${YERITH_WEB_PAGES_GENERATOR_HOME_FOLDER}/yerith-web-pages-generator_c
 	if [ ! $simflag ]; then
 		${YERITH_WEB_PAGES_GENERATOR_HOME_FOLDER}/yerith-web-pages-generator_comp ${INPUT_SPEC_HTML_FILE}
 		Output_Dir=$(cat "from_cpp.txt")
-		rm -rf ${HOME}/public_html/${Output_Dir}/*
+		rm -rf ${HOME}/public_html/${Output_Dir}/
 		mkdir -p ${HOME}/public_html/${Output_Dir}
 		cp -r ${Output_Dir}/* ${HOME}/public_html/${Output_Dir}
 	else
 		echo "${YERITH_WEB_PAGES_GENERATOR_HOME_FOLDER}/yerith-web-pages-generator_comp ${INPUT_SPEC_HTML_FILE}"
 		Output_Dir=$(cat "from_cpp.txt")
-		echo "rm -rf ${HOME}/public_html/${Output_Dir}/*"
+		echo "rm -rf ${HOME}/public_html/${Output_Dir}/"
 		echo "mkdir -p ${HOME}/public_html/${Output_Dir}"
 		echo "cp -r ${Output_Dir}/* ${HOME}/public_html/${Output_Dir}"
 	fi
@@ -85,9 +85,9 @@ fi
 
 
 if [ ! $simflag ]; then
-	firefox --new-tab "127.0.0.1/~yerith-erp-pgi/${Output_Dir}/index.php" &
+	firefox --new-tab "127.0.0.1/~$USER/${Output_Dir}/index.php" &
 else
-	echo "firefox --new-tab "127.0.0.1/~yerith-erp-pgi/${Output_Dir}/index.php" &"
+	echo "firefox --new-tab "127.0.0.1/~$USER/${Output_Dir}/index.php" &"
 fi
 
 
