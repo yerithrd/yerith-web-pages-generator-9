@@ -52,18 +52,17 @@ QString YRITreeHTMLPageDatetimeedit::generate_html_text_description()
 //  <input type="date" id="birthday" name="birthday">
 //  <input type="submit">
 //</form>
-    QString result = "<form action=\"\" >\n";
+    QString result;
 
-    result.append(QString("<label id=\"label-date-time-id%1\" for=\"date-time-id%2\">%3</label>\n")
+    result.append(QString("\n\n<label id=\"label-date-time-id%1\" for=\"date-time-id%2\">%3</label>\n")
                         .arg(QString::number(Get_element_ID()),
                              QString::number(Get_element_ID()),
                              Get__element_text()));
 
-    result.append(QString("<input type=\"date\" id=\"date-time-id%1\" name=\"date-time-id%2\"> \n")
+    result.append(QString("<input type=\"date\" id=\"date-time-id%1\" name=\"date-time-id%2\"> \n\n")
                         .arg(QString::number(Get_element_ID()),
                              QString::number(Get_element_ID())));
 
-    result.append("<input type=\"sumit\"> \n</form>\n\n");
 //    QDEBUG_STRING_OUTPUT_2("YRITreeHTMLPageDatetimeedit::generate_html_text_description()",
 //                            result);
 
