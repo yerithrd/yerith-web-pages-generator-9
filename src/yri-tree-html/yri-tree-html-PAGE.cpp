@@ -9,6 +9,8 @@
 #include "yri-tree-html-PAGE.hpp"
 
 
+#include "yri-tree-html-PAGE-tableview.hpp"
+
 #include "yri-tree-html-PAGE-date-time-edit.hpp"
 
 #include "yri-tree-html-PAGE-label-text.hpp"
@@ -97,6 +99,8 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
 
 
 
+    QList<YRITreeHTMLPageTableView *>    *a_web_page_Current_Tableview___LIST = 0;
+
     QList<YRITreeHTMLPageDatetimeedit *>    *a_web_page_Current_Datetimeedit___LIST = 0;
 
     QList<YRITreeHTMLPageLABELText *> *a_web_page_Current_LabelText___LIST = 0;
@@ -115,6 +119,9 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
      */
     if (0 != _main_generator_pointer)
     {
+        a_web_page_Current_Tableview___LIST =
+                    _main_generator_pointer->Get___web_page_Current_Tableview___LIST();
+
         a_web_page_Current_Datetimeedit___LIST =
                     _main_generator_pointer->Get___web_page_Current_Datetimeedit___LIST();
 
@@ -148,6 +155,31 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
 
 //    qDebug() << "GET_htlm_PAGE_body_Content_STRING; size of get_children_NODES() : "
 //             << children_HTML_Page_ID___To___children_nodes.size();
+
+
+    YRITreeHTMLPageTableView *a_table_view = 0;
+
+    if (0 != a_web_page_Current_Tableview___LIST)
+    {
+        for (uint i = 0; i < a_web_page_Current_Tableview___LIST->size(); ++i)
+        {
+            a_table_view = a_web_page_Current_Tableview___LIST->at(i);
+
+            if (0 != a_table_view)
+            {
+                dbgQString = a_table_view->generate_html_text_description();
+
+                html_page_body_content_STRING
+                    .append(dbgQString);
+
+                //QDEBUG_STRING_OUTPUT_2("dbgQString-1", dbgQString);
+
+                dbgQString = a_table_view->generate_CSS_File_Content_STRING();
+
+                //QDEBUG_STRING_OUTPUT_2("dbgQString-2", dbgQString);
+            }
+        }
+    }
 
 
     YRITreeHTMLPageDatetimeedit *a_date_time_edit = 0;

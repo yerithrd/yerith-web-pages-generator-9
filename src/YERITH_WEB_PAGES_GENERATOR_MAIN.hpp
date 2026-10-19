@@ -14,6 +14,8 @@
 #include <QtCore/QString>
 
 
+class YRITreeHTMLPageTableView;
+
 class YRITreeHTMLPageELEMENT;
 
 class YRITreeHTMLPageDatetimeedit;
@@ -42,7 +44,8 @@ class YERITH_WEB_PAGES_GENERATOR_MAIN
 public:
 
     inline YERITH_WEB_PAGES_GENERATOR_MAIN()
-    :_web_page_Current_Datetimeedit___LIST(0),
+    :_web_page_Current_Tableview___LIST(0),
+     _web_page_Current_Datetimeedit___LIST(0),
      _web_page_Current_Label_Text___LIST(0),
      _web_page_Current_Button___LIST(0),
      _web_page_Current_Check_Box___LIST(0),
@@ -188,7 +191,12 @@ public:
 
 
 
-    // Processing input text (HTML 'input' text)
+        // Processing input tableView (HTML 'input' table)
+    virtual void
+        PROCESS_Current__yri_html_page_Widget_table_view();
+
+
+    // Processing input dateTimeEdit (HTML 'input' date choice)
     virtual void
         PROCESS_Current__yri_html_page_Widget_date_time_edit();
 
@@ -260,6 +268,11 @@ public:
         return _header_menu_bar_SPECIFICATION_name_in_file;
     }
 
+
+    virtual inline QList<YRITreeHTMLPageTableView *> *Get___web_page_Current_Tableview___LIST()
+    {
+        return _web_page_Current_Tableview___LIST;
+    }
 
     virtual inline QList<YRITreeHTMLPageDatetimeedit *> *Get___web_page_Current_Datetimeedit___LIST()
     {
@@ -354,6 +367,8 @@ private:
     QString                         _header_menu_bar_SPECIFICATION_name_in_file;
 
 
+
+    QList<YRITreeHTMLPageTableView *>   *_web_page_Current_Tableview___LIST;
 
     QList<YRITreeHTMLPageDatetimeedit *>   *_web_page_Current_Datetimeedit___LIST;
 

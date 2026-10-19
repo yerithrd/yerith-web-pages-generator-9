@@ -39,6 +39,8 @@
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-label-text.hpp" />
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-menu-bar-headers.cpp" />
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-menu-bar-headers.hpp" />
+		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-tableview.cpp" />
+		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-tableview.hpp" />
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-text-section.cpp" />
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE-text-section.hpp" />
 		<Unit filename="src/yri-tree-html/yri-tree-html-PAGE.cpp" />

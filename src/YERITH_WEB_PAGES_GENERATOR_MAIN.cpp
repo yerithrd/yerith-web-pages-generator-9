@@ -28,6 +28,8 @@
 
 #include "yri-tree-html/yri-tree-html-PAGE-date-time-edit.hpp"
 
+#include "yri-tree-html/yri-tree-html-PAGE-tableview.hpp"
+
 #include "yri-tree-html/yri-tree-html-PAGE-button.hpp"
 
 #include "yri-tree-html/yri-tree-html-node.hpp"
@@ -739,6 +741,39 @@ void YERITH_WEB_PAGES_GENERATOR_MAIN::
 
 //        _web_page_Current_PROCESSED_Element->print_debugging();
     }
+}
+
+
+void YERITH_WEB_PAGES_GENERATOR_MAIN::
+        PROCESS_Current__yri_html_page_Widget_table_view()
+{
+    if (0 == _web_page_Current_Tableview___LIST)
+    {
+        _web_page_Current_Tableview___LIST = new QList<YRITreeHTMLPageTableView *>();
+    }
+
+
+    if (! YRI_CPP_UTILS::isEqualsCaseInsensitive(_current_processed_HTML_Page___CSS_file_name, _current_processed_HTML_Page))
+    {
+        _current_processed_HTML_Page___CSS_file_name = _current_processed_HTML_Page;
+    }
+
+
+    YRITreeHTMLPage *_current_processed_HTML_Page_DS =
+        _webhtmlpageFileNAME__To__web_html_pageDATASTRUCTURE.value(_current_processed_HTML_Page);
+
+
+    YRITreeHTMLPageTableView *an_input_table = new YRITreeHTMLPageTableView(_current_processed_HTML_Page_DS);
+
+
+    _web_page_Current_Tableview___LIST->append(an_input_table);
+
+
+//    QDEBUG_STRING_OUTPUT_2_N("_web_page_Current_Tableview___LIST | size",
+//                              _web_page_Current_Tableview___LIST->size());
+
+
+    _web_page_Current_PROCESSED_Element = an_input_table;
 }
 
 
