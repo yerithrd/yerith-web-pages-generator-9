@@ -55,7 +55,8 @@ QString YRITreeHTMLPageTableView::generate_html_text_description()
 
     QString result;
 
-    result.append("<table></table>");
+    result.append(QString("<table width=\"%1\"></table>")
+                    .arg(Get__yri_element_WIDTH()));
 
 //    QDEBUG_STRING_OUTPUT_2("YRITreeHTMLPageTableView::generate_html_text_description()",
 //                            result);
