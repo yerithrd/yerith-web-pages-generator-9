@@ -20,10 +20,6 @@ QString  YRITreeHTMLPageInputText::_header_Content_CSS_File;
 YRITreeHTMLPageInputText::YRITreeHTMLPageInputText(YRITreeHTMLPage *a_containing_HTML_Page)
 :YRITreeHTMLPageELEMENT()
 {
-    if (_header_Content_CSS_File.isEmpty())
-    {
-    }
-
     SET_containing_HTML_Page(a_containing_HTML_Page);
 }
 
@@ -53,7 +49,7 @@ QString YRITreeHTMLPageInputText::generate_html_text_description()
         ++ID_for_Label_text;
     }
 
-    QString result = QString("<form action=\"\">\n<label id=\"input_text_label-id%1\" for=\"%2\">%3</label><br>\n")
+    QString result = QString("<label id=\"input_text_label-id%1\" for=\"%2\">%3</label><br>\n")
                         .arg(QString::number(Get_element_ID()),
                              Get__element_name(),
                              Get__element_text());
@@ -62,10 +58,10 @@ QString YRITreeHTMLPageInputText::generate_html_text_description()
                         .arg(QString::number(Get_element_ID()),
                              Get__element_name()));
 
-    result.append(QString("<input id=\"input_text_submit-id%1\" type=\"submit\" value=\"Submit\">\n")
-                    .arg(QString::number(Get_element_ID())));
+//    result.append(QString("<input id=\"input_text_submit-id%1\" type=\"submit\" value=\"Submit\">\n")
+//                    .arg(QString::number(Get_element_ID())));
 
-    result.append("</form>\n");
+//    result.append("</form>\n");
 
     result.append("\n");
 
@@ -82,7 +78,7 @@ QString YRITreeHTMLPageInputText::generate_CSS_File_Content_STRING()
 
     int y_label_position = Get__yri_element_Y_position_geometry_integer_value();
 
-    int x_input_position = x_label_position + 120;
+    int x_input_position = x_label_position + 27;
 
     int y_input_position = y_label_position;
 
@@ -108,18 +104,19 @@ QString YRITreeHTMLPageInputText::generate_CSS_File_Content_STRING()
     content.append(QString("#input_text_input-id%1{\n")
                     .arg(QString::number(Get_element_ID())));
     content.append("position: absolute;\n")
+           .append(QString("width: %1px; \n").arg(Get__yri_element_WIDTH()))
            .append(QString("top: %1px; /*Y coordinate*/\n").arg(QString::number(y_input_position)))
            .append(QString("left: %1px; /*X coordinate*/\n").arg(QString::number(x_input_position)));
 
     content.append("}\n");
 
-    content.append(QString("#input_text_submit-id%1{\n")
-                    .arg(QString::number(Get_element_ID())));
-    content.append("position: absolute;\n")
-           .append(QString("top: %1px; /*Y coordinate*/\n").arg(QString::number(y_submit_position)))
-           .append(QString("left: %1px; /*X coordinate*/\n").arg(QString::number(x_submit_position)));
-
-    content.append("}\n\n");
+//    content.append(QString("#input_text_submit-id%1{\n")
+//                    .arg(QString::number(Get_element_ID())));
+//    content.append("position: absolute;\n")
+//           .append(QString("top: %1px; /*Y coordinate*/\n").arg(QString::number(y_submit_position)))
+//           .append(QString("left: %1px; /*X coordinate*/\n").arg(QString::number(x_submit_position)));
+//
+//    content.append("}\n\n");
 
 
     YRITreeHTMLPageInputText::_header_Content_CSS_File.append("\n")

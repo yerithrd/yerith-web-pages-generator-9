@@ -53,7 +53,7 @@ QString YRITreeHTMLPageCheckBox::generate_html_text_description()
         ++ID_for_Label_text;
     }
 
-    QString result =  QString("<form action=\"\">\n<input type=\"checkbox\" id=\"check_box_input-id%1\" name=\"%2\" value=\"%3\">\n")
+    QString result =  QString("<input type=\"checkbox\" id=\"check_box_input-id%1\" name=\"%2\" value=\"%3\">\n")
                         .arg(QString::number(Get_element_ID()),
                              Get__element_name(),
                              Get__element_text());
@@ -62,10 +62,8 @@ QString YRITreeHTMLPageCheckBox::generate_html_text_description()
                     .arg(QString::number(Get_element_ID()),
                          Get__element_text()));
 
-    result.append(QString("<input id=\"check_box_submit-id%1\" type=\"submit\" value=\"Submit\">\n")
-                    .arg(QString::number(Get_element_ID())));
-
-    result.append("</form>\n");
+//    result.append(QString("<input id=\"check_box_submit-id%1\" type=\"submit\" value=\"Submit\">\n")
+//                    .arg(QString::number(Get_element_ID())));
 
     result.append("\n");
 
