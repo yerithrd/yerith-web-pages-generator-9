@@ -42,12 +42,12 @@ yri_html_page_Widget_button							"yri_html_page_Widget_button"
 yri_html_page_input_header_menu_bar			"yri_html_page_input_header_menu_bar"
 
 /* TODO: put '|' sign in comment \& string specification of lexer !*/
-comment_string												"#"[ -:;|'\.?!%^&*=-@$_,()`a-zA-Z0-9]*
-string																"'"[ -:|\t\n\\.?!%^&*=-@$_,()`a-zA-Z0-9]*"'"
-yri_text															"\""[ -:|\t\n\\.?!%^&*=-@$_,()`a-zA-Z0-9]*"\""
+comment_string												"#"[ -:;|'\.?!%^&*=-@$_,()`a-zA-Z0-9éèàùçâêîôûëïü]*
+string																"'"[ -:|\t\n\\.?!%^&*=-@$_,()`a-zA-Z0-9éèàùçâêîôûëïü]*"'"
+yri_text															"\""[ -:|\t\n\\.?!%^&*=-@$_,()`a-zA-Z0-9éèàùçâêîôûëïü]*"\""
 unit_text_spec												(m|cm|px)+
 num																		[0-9]+
-alpha_num															[_a-zA-Z]+[-_0-9a-zA-Z]*
+alpha_num															[_a-zA-Zéèàùçâêîôûëïü]+[-_0-9a-zA-Zéèàùçâêîôûëïü]*
 slash																	"/"
 equal																	"="
 assignment_yri_web										"==="
