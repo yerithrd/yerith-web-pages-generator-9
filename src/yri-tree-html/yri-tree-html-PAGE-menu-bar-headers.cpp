@@ -84,16 +84,18 @@ QString YRITreeHTMLPageMenuBarHeaders::generate_html_text_description()
                 if (! current_html_page_Menu_BAR_link_string.isEmpty())
                 {
                     header_Menu_BAR_html_code_source
-                        .append(QString("\t\t\t\t<th><a href=\"http://localhost/~yerith-erp-pgi/%1/%2.php\">%3</a></th>\n")
-                                    .arg(main_generator->Get___this_GENERATOR_specification_NAME(),
+                        .append(QString("\t\t\t\t<th><a href=\"http://localhost/~%1/%2/%3.php\">%4</a></th>\n")
+                                    .arg(main_generator->Get___this_GENERATOR_user_NAME(),
+                                         main_generator->Get___this_GENERATOR_specification_NAME(),
                                          a_html_menu_bar_linked_file_Html_Page_NAME,
                                          current_html_page_Menu_BAR_link_string));
                 }
                 else
                 {
                     header_Menu_BAR_html_code_source
-                        .append(QString("\t\t\t\t<th><a href=\"http://localhost/~yerith-erp-pgi/%1/%2.php\">%3</a></th>\n")
-                                    .arg(main_generator->Get___this_GENERATOR_specification_NAME(),
+                        .append(QString("\t\t\t\t<th><a href=\"http://localhost/~%1/%2/%3.php\">%4</a></th>\n")
+                                    .arg(main_generator->Get___this_GENERATOR_user_NAME(),
+                                         main_generator->Get___this_GENERATOR_specification_NAME(),
                                          a_html_menu_bar_linked_file_Html_Page_NAME,
                                          a_html_menu_bar_linked_file_Html_Page_NAME));
                 }
@@ -101,8 +103,9 @@ QString YRITreeHTMLPageMenuBarHeaders::generate_html_text_description()
             else
             {
                 header_Menu_BAR_html_code_source
-                    .append(QString("\t\t\t\t<th><a href=\"http://localhost/~yerith-erp-pgi/%1/%2.php\">%3</a></th>\n")
-                                .arg(main_generator->Get___this_GENERATOR_specification_NAME(),
+                    .append(QString("\t\t\t\t<th><a href=\"http://localhost/~%1/%2/%3.php\">%4</a></th>\n")
+                                .arg(main_generator->Get___this_GENERATOR_user_NAME(),
+                                     main_generator->Get___this_GENERATOR_specification_NAME(),
                                      a_html_menu_bar_linked_file_Html_Page_NAME,
                                      a_html_menu_bar_linked_file_Html_Page_NAME));
             }

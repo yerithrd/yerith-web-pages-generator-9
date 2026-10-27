@@ -47,6 +47,7 @@
 #include <QtCore/QDebug>
 
 
+#include <cstdlib>
 
 
 
@@ -277,6 +278,10 @@ void YERITH_WEB_PAGES_GENERATOR_MAIN::PROCESS___comments(int     a_line_number,
 void YERITH_WEB_PAGES_GENERATOR_MAIN::PROCESS___start_input(QString webPagesGeneratorMAIN_specification_name)
 {
     YRITreeHTMLNode::set__main_generator_pointer(this);
+
+    QString user_name = QString(std::getenv("USER")).trimmed();
+
+    SET___this_GENERATOR_user_NAME(user_name);
 
     SET___this_GENERATOR_specification_NAME(webPagesGeneratorMAIN_specification_name);
 

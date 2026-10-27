@@ -244,6 +244,18 @@ public:
     virtual QString generate_buttons_CSS___Content(QString directory_folder);
 
 
+    virtual inline void SET___this_GENERATOR_user_NAME
+                            (QString a_this_GENERATOR_user_NAME)
+    {
+        _this_GENERATOR_user_NAME = a_this_GENERATOR_user_NAME;
+    }
+
+    virtual inline QString Get___this_GENERATOR_user_NAME()
+    {
+        return _this_GENERATOR_user_NAME;
+    }
+
+
     virtual inline void SET___this_GENERATOR_specification_NAME
                             (QString a_this_GENERATOR_specification_NAME)
     {
@@ -361,6 +373,8 @@ private:
     QString                         _current_processed_HTML_Page___CSS_file_name_CONTENT;
 
     QString                         _current_processed_HTML_Page;
+
+    QString                         _this_GENERATOR_user_NAME;
 
     QString                         _this_GENERATOR_specification_NAME;
 

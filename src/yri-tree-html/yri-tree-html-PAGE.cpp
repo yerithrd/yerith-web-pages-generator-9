@@ -167,16 +167,22 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
 
             if (0 != a_table_view)
             {
-                dbgQString = a_table_view->generate_html_text_description();
+                QString a_containing_HTML_page_name = a_table_view->Get__containing_HTML_Page()->Get__html_page_name();
 
-                html_page_body_content_STRING
+                if (YRI_CPP_UTILS::isEqualsCaseInsensitive(_html_page_name,
+                                                           a_containing_HTML_page_name))
+                {
+                    dbgQString = a_table_view->generate_html_text_description();
+
+                    html_page_body_content_STRING
                     .append(dbgQString);
 
-                //QDEBUG_STRING_OUTPUT_2("dbgQString-1", dbgQString);
+                    //QDEBUG_STRING_OUTPUT_2("dbgQString-1", dbgQString);
 
-                dbgQString = a_table_view->generate_CSS_File_Content_STRING();
+                    dbgQString = a_table_view->generate_CSS_File_Content_STRING();
 
-                //QDEBUG_STRING_OUTPUT_2("dbgQString-2", dbgQString);
+                    //QDEBUG_STRING_OUTPUT_2("dbgQString-2", dbgQString);
+                }
             }
         }
     }
@@ -192,16 +198,22 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
 
             if (0 != a_date_time_edit)
             {
-                dbgQString = a_date_time_edit->generate_html_text_description();
+                QString a_containing_HTML_page_name = a_date_time_edit->Get__containing_HTML_Page()->Get__html_page_name();
 
-                html_page_body_content_STRING
+                if (YRI_CPP_UTILS::isEqualsCaseInsensitive(_html_page_name,
+                                                           a_containing_HTML_page_name))
+                {
+                    dbgQString = a_date_time_edit->generate_html_text_description();
+
+                    html_page_body_content_STRING
                     .append(dbgQString);
 
-                //QDEBUG_STRING_OUTPUT_2("dbgQString-1", dbgQString);
+                    //QDEBUG_STRING_OUTPUT_2("dbgQString-1", dbgQString);
 
-                dbgQString = a_date_time_edit->generate_CSS_File_Content_STRING();
+                    dbgQString = a_date_time_edit->generate_CSS_File_Content_STRING();
 
-                //QDEBUG_STRING_OUTPUT_2("dbgQString-2", dbgQString);
+                    //QDEBUG_STRING_OUTPUT_2("dbgQString-2", dbgQString);
+                }
             }
         }
     }
@@ -217,16 +229,22 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
 
             if (0 != a_label_text)
             {
-                dbgQString = a_label_text->generate_html_text_description();
+                QString a_containing_HTML_page_name = a_label_text->Get__containing_HTML_Page()->Get__html_page_name();
 
-                html_page_body_content_STRING
+                if (YRI_CPP_UTILS::isEqualsCaseInsensitive(_html_page_name,
+                                                           a_containing_HTML_page_name))
+                {
+                    dbgQString = a_label_text->generate_html_text_description();
+
+                    html_page_body_content_STRING
                     .append(dbgQString);
 
-                //QDEBUG_STRING_OUTPUT_2("dbgQString-1", dbgQString);
+                    //QDEBUG_STRING_OUTPUT_2("dbgQString-1", dbgQString);
 
-                dbgQString = a_label_text->generate_CSS_File_Content_STRING();
+                    dbgQString = a_label_text->generate_CSS_File_Content_STRING();
 
-                //QDEBUG_STRING_OUTPUT_2("dbgQString-2", dbgQString);
+                    //QDEBUG_STRING_OUTPUT_2("dbgQString-2", dbgQString);
+                }
             }
         }
     }
@@ -242,12 +260,18 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
 
             if (0 != a_button)
             {
-                dbgQString = a_button->generate_html_text_description();
+                QString a_containing_HTML_page_name = a_button->Get__containing_HTML_Page()->Get__html_page_name();
 
-                html_page_body_content_STRING
+                if (YRI_CPP_UTILS::isEqualsCaseInsensitive(_html_page_name,
+                                                           a_containing_HTML_page_name))
+                {
+                    dbgQString = a_button->generate_html_text_description();
+
+                    html_page_body_content_STRING
                     .append(dbgQString);
 
-                dbgQString = a_button->generate_CSS_File_Content_STRING();
+                    dbgQString = a_button->generate_CSS_File_Content_STRING();
+                }
             }
         }
     }
@@ -264,14 +288,19 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
 
             if (0 != an_input_text)
             {
-                dbgQString = an_input_text->generate_html_text_description();
+                QString a_containing_HTML_page_name = an_input_text->Get__containing_HTML_Page()->Get__html_page_name();
+
+                if (YRI_CPP_UTILS::isEqualsCaseInsensitive(_html_page_name,
+                                                           a_containing_HTML_page_name))
+                {
+                    dbgQString = an_input_text->generate_html_text_description();
 
 //                QDEBUG_STRING_OUTPUT_2("dbgQString-1", dbgQString);
 
-                html_page_body_content_STRING
-                    .append(dbgQString);
+                    html_page_body_content_STRING.append(dbgQString);
 
-                dbgQString = an_input_text->generate_CSS_File_Content_STRING();
+                    dbgQString = an_input_text->generate_CSS_File_Content_STRING();
+                }
             }
         }
     }
@@ -287,12 +316,18 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
 
             if (0 != a_check_box)
             {
-                dbgQString = a_check_box->generate_html_text_description();
+                QString a_containing_HTML_page_name = a_check_box->Get__containing_HTML_Page()->Get__html_page_name();
 
-                html_page_body_content_STRING
+                if (YRI_CPP_UTILS::isEqualsCaseInsensitive(_html_page_name,
+                                                           a_containing_HTML_page_name))
+                {
+                    dbgQString = a_check_box->generate_html_text_description();
+
+                    html_page_body_content_STRING
                     .append(dbgQString);
 
-                dbgQString = a_check_box->generate_CSS_File_Content_STRING();
+                    dbgQString = a_check_box->generate_CSS_File_Content_STRING();
+                }
             }
         }
     }
@@ -308,12 +343,18 @@ QString YRITreeHTMLPage::GET_htlm_PAGE_body_Content_STRING()
 
             if (0 != a_combo_box)
             {
-                dbgQString = a_combo_box->generate_html_text_description();
+                QString a_containing_HTML_page_name = a_combo_box->Get__containing_HTML_Page()->Get__html_page_name();
 
-                html_page_body_content_STRING
+                if (YRI_CPP_UTILS::isEqualsCaseInsensitive(_html_page_name,
+                                                           a_containing_HTML_page_name))
+                {
+                    dbgQString = a_combo_box->generate_html_text_description();
+
+                    html_page_body_content_STRING
                     .append(dbgQString);
 
-                dbgQString = a_combo_box->generate_CSS_File_Content_STRING();
+                    dbgQString = a_combo_box->generate_CSS_File_Content_STRING();
+                }
             }
         }
     }
