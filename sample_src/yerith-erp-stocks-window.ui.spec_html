@@ -1,0 +1,80 @@
+
+yerith-web-pages-generator-MAIN YERITHERPPGIPlatinum
+{
+web-html-page index {
+yri_html_page_title: 'Bienvenue !';
+yri_html_page_MENU_BAR_link_string: 'index';
+yri_html_page_input_header_menu_bar[web-html-page-menu-bar-headers];
+};
+
+web-html-page yerith-erp-stocks-window-ui {
+yri_html_page_title: 'Bienvenue !';
+yri_html_page_MENU_BAR_link_string: 'yerith-erp-stocks-window-ui';
+yri_html_page_input_header_menu_bar[web-html-page-menu-bar-headers];
+
+yri_html_page_Widget_button ('Afficher')   { '162'; '12'; '120'; '67' };
+yri_html_page_Widget_button ('Entrer une
+immobilisation,
+un stock,
+un service,
+ une CHARGE')   { '519'; '12'; '120'; '67' };
+yri_html_page_Widget_button ('Achats STOCKS
+OU
+IMMOBILISATIONS')   { '11'; '12'; '120'; '67' };
+yri_html_page_Widget_table_view ('tableView_stocks'; '')   { '11'; '119'; '778'; '278' };
+yri_html_page_Widget_button ('Menu')   { '315'; '12'; '171'; '67' };
+yri_html_page_Widget_input_text ('lineEdit_stock_terme_recherche'; '')   { '11'; '89'; '656'; '25' };
+yri_html_page_Widget_button ('réinitialiser')   { '633'; '494'; '157'; '21' };
+yri_html_page_Widget_combo_box ('comboBox_strategie_de_stocks'; '')   { '670'; '89'; '118'; '25' };
+yri_html_page_Widget_input_text ('lineEdit_stocks_element_de_stock_resultat'; '')   { '244'; '470'; '231'; '21' };
+yri_html_page_Widget_button ('filtrer')   { '165'; '494'; '151'; '21' };
+yri_html_page_Widget_combo_box ('comboBox_stocks_element_de_stock_condition'; '')   { '165'; '470'; '77'; '21' };
+yri_html_page_Widget_combo_box ('comboBox_stocks_element_de_stock'; '')   { '11'; '470'; '151'; '21' };
+yri_html_page_Widget_button ('reinitialiser filtre')   { '11'; '494'; '151'; '21' };
+yri_html_page_Widget_input_text ('lineEdit_stocks_nombre_de_lignes_par_page'; '')   { '202'; '400'; '40'; '21' };
+yri_html_page_Widget_button ('')   { '375'; '400'; '21'; '21' };
+yri_html_page_Widget_button ('')   { '427'; '400'; '21'; '21' };
+yri_html_page_Widget_label_text ('/')   { '301'; '400'; '12'; '21' };
+yri_html_page_Widget_button ('')   { '453'; '400'; '21'; '21' };
+yri_html_page_Widget_label_text ('CURRENT PAGE NR')   { '244'; '400'; '52'; '21' };
+yri_html_page_Widget_label_text ('LAST PAGE NR')   { '318'; '400'; '52'; '21' };
+yri_html_page_Widget_button ('')   { '401'; '400'; '21'; '21' };
+yri_html_page_Widget_label_text ('# lignes')   { '140'; '399'; '57'; '21' };
+yri_html_page_Widget_combo_box ('comboBox_element_string_db'; '')   { '244'; '423'; '231'; '21' };
+yri_html_page_Widget_input_text ('lineEdit_nom_element_string_db'; '')   { '244'; '446'; '212'; '21' };
+yri_html_page_Widget_date_time_edit ('dateEdit_stocks_fin'; '')   { '131'; '446'; '111'; '21' };
+yri_html_page_Widget_label_text ('Debut')   { '12'; '423'; '117'; '21' };
+yri_html_page_Widget_label_text ('Fin')   { '77'; '445'; '52'; '21' };
+yri_html_page_Widget_label_text ('Valeur d'inv.')   { '487'; '445'; '101'; '21' };
+yri_html_page_Widget_input_text ('lineEdit_stocks_valeur_totale_dinventaire'; '')   { '591'; '446'; '200'; '21' };
+yri_html_page_Widget_input_text ('lineEdit_stocks_nombre_darticles'; '')   { '591'; '423'; '200'; '21' };
+yri_html_page_Widget_label_text ('# d'articles')   { '507'; '422'; '81'; '21' };
+yri_html_page_Widget_button ('Marchandises /
+ SERVICES')   { '670'; '12'; '120'; '67' };
+yri_html_page_Widget_button ('')   { '480'; '423'; '21'; '21' };
+yri_html_page_Widget_input_text ('lineEdit_nombre_de_stocks_IMMOBILISATIONS'; '')   { '591'; '400'; '200'; '21' };
+yri_html_page_Widget_label_text ('# immobilisations')   { '476'; '399'; '111'; '21' };
+yri_html_page_Widget_combo_box ('comboBox_CHOICE_IMMOBILISATION_STOCK'; '')   { '591'; '469'; '200'; '21' };
+yri_html_page_Widget_label_text ('# stocks')   { '476'; '399'; '111'; '21' };
+yri_html_page_Widget_label_text ('type de inventaire')   { '480'; '468'; '108'; '21' };
+yri_html_page_Widget_check_box ('checkBox_filtres'; 'filtres')   { '11'; '445'; '63'; '21' };
+yri_html_page_Widget_check_box ('checkBox_EXACT_STRING_MATCH'; '')   { '459'; '446'; '16'; '21' };
+yri_html_page_Widget_date_time_edit ('dateEdit_stocks_debut'; '')   { '131'; '423'; '111'; '21' };
+yri_html_page_Widget_label_text ('Connected (Distant) Site')   { '330'; '494'; '145'; '21' };
+yri_html_page_Widget_label_text ('Connected (Distant) Site')   { '330'; '494'; '145'; '21' };
+
+};
+
+
+# Comment: Here are declared all web html pages #
+# linked to this menubar widget			#
+web-html-page-menu-bar-headers
+{
+# jh_nissi #
+# vertical-left  vertical-right  horizontal-top #
+web-html-page-menu-bar-headers_Position = 'vertical-left';
+
+yri_html_page_section[index, yerith-erp-stocks-window-ui];
+};
+}
+
