@@ -768,17 +768,17 @@ void YERITH_WEB_PAGES_GENERATOR_MAIN::
         _webhtmlpageFileNAME__To__web_html_pageDATASTRUCTURE.value(_current_processed_HTML_Page);
 
 
-    YRITreeHTMLPageTableView *an_input_table = new YRITreeHTMLPageTableView(_current_processed_HTML_Page_DS);
+    YRITreeHTMLPageTableView *an_input_table_View = new YRITreeHTMLPageTableView(_current_processed_HTML_Page_DS);
 
 
-    _web_page_Current_Tableview___LIST->append(an_input_table);
+    _web_page_Current_Tableview___LIST->append(an_input_table_View);
 
 
 //    QDEBUG_STRING_OUTPUT_2_N("_web_page_Current_Tableview___LIST | size",
 //                              _web_page_Current_Tableview___LIST->size());
 
 
-    _web_page_Current_PROCESSED_Element = an_input_table;
+    _web_page_Current_PROCESSED_Element = an_input_table_View;
 }
 
 
@@ -801,17 +801,17 @@ void YERITH_WEB_PAGES_GENERATOR_MAIN::
         _webhtmlpageFileNAME__To__web_html_pageDATASTRUCTURE.value(_current_processed_HTML_Page);
 
 
-    YRITreeHTMLPageDatetimeedit *an_input_text = new YRITreeHTMLPageDatetimeedit(_current_processed_HTML_Page_DS);
+    YRITreeHTMLPageDatetimeedit *a_date_time_edit = new YRITreeHTMLPageDatetimeedit(_current_processed_HTML_Page_DS);
 
 
-    _web_page_Current_Datetimeedit___LIST->append(an_input_text);
+    _web_page_Current_Datetimeedit___LIST->append(a_date_time_edit);
 
 
 //    QDEBUG_STRING_OUTPUT_2_N("_web_page_Current_Datetimeedit___LIST | size",
 //                              _web_page_Current_Datetimeedit___LIST->size());
 
 
-    _web_page_Current_PROCESSED_Element = an_input_text;
+    _web_page_Current_PROCESSED_Element = a_date_time_edit;
 }
 
 
