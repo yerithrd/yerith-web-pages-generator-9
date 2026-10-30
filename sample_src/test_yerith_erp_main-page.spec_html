@@ -2,10 +2,10 @@
 yerith-web-pages-generator-MAIN YERITHERPPGIPlatinum
 {
 
-	web-html-page index {
+	web-html-page yerith-erp-main-window-ui {
 		# 'yerith-erp-main-window.ui' #
 		yri_html_page_title: 'Bienvenue !';
-		yri_html_page_MENU_BAR_link_string: 'index';
+		yri_html_page_MENU_BAR_link_string: 'yerith-erp-main-window-ui';
 		yri_html_page_input_header_menu_bar[web-html-page-menu-bar-headers];
 
 
@@ -65,11 +65,6 @@ yerith-web-pages-generator-MAIN YERITHERPPGIPlatinum
 		# vertical-left  vertical-right  horizontal-top 		#
 		web-html-page-menu-bar-headers_Position = 'vertical-left';
 
-		yri_html_page_section[index,
-													yri_test,
-												  a_propos, 
-												  programme_des_cours, 
-													contenu_des_cours,
-													impressum];	
+		yri_html_page_section[yerith-erp-main-window-ui];	
 	};
 }
